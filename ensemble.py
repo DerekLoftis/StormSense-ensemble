@@ -39,8 +39,8 @@ import etss  # noqa: E402
 import psurge  # noqa: E402
 
 TIDEWATCH_URL = os.environ.get("TIDEWATCH_URL", "https://web4.vims.edu/physical/tidewatch/")
-NAME = re.compile(r"^([A-Z0-9]+)_\d{4}_(f36|3d)(?:_(MLLW|NAVD))?(_hc\.html|\.csv)$")
-PICKLE = re.compile(r"^[A-Z0-9]+_\d{4}_f36\.pypickle$")
+NAME = re.compile(r"^([A-Z0-9-]+)_\d{4}_(f36|3d)(?:_(MLLW|NAVD))?(_hc\.html|\.csv)$")
+PICKLE = re.compile(r"^[A-Z0-9-]+_\d{4}_f36\.pypickle$")
 DROP = re.compile(r"^(NN\d\d|VB\d\d|USNW|USPF|USSV)_")  # retired or non-tidal (Derek, 2026-10-15)
 HOURS = 72
 STEP = timedelta(minutes=6)
@@ -345,7 +345,7 @@ def style(raw, work, pages_dir):
 
 def place(work, pages_dir, site):
     for n in os.listdir(pages_dir):
-        m = re.match(r"^([A-Z0-9]+)_2018_f36_(MLLW_)?hc\.html$", n)
+        m = re.match(r"^([A-Z0-9-]+)_2018_f36_(MLLW_)?hc\.html$", n)
         if m:
             shutil.copy(os.path.join(pages_dir, n),
                         os.path.join(site, "ens72", f"{m.group(1)}_ens72_{'MLLW' if m.group(2) else 'NAVD'}.html"))
