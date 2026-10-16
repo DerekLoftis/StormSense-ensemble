@@ -287,6 +287,8 @@ def main(site="site", work="work"):
         print(f"petss: run {pet_cycle:%Y-%m-%d %HZ} at {len(pet)} gauges")
     except Exception as e:
         print("petss: unavailable", e)
+    # VIMS gauges P-ETSS doesn't forecast (BRDH): a nearby station's P-ETSS surge on their own tide
+    proxy, _ = noaa_override.petss_proxies(pet)
     # ETSS's bulletin is surge only: it rides on the P-ETSS (NOAA harmonic) tide
     raw_members.update(fetch_members(now, stations, {
         "etss": lambda: etss.fetch(now, stations, etss.tides_from_petss(pet, stations))}))
@@ -301,7 +303,7 @@ def main(site="site", work="work"):
             continue
         off = P.offset(f36, st)
         tw = series_csv(os.path.join(f36, f"{st}_2018_f36_MLLW.csv"), "px30")
-        t0, grid, cols, notes = build_station(st, obs, off, raw_members, pet.get(info["nws_lid"]), pet_cycle, tw)
+        t0, grid, cols, notes = build_station(st, obs, off, raw_members, pet.get(info["nws_lid"]) or proxy.get(st), pet_cycle, tw)
         members_here = [MEMBERS[k][0] for k in MEMBERS if k in cols]
         guide = f"StormSense Ensemble: {len(members_here)} forecasts; model guidance lined up with the gauge's last 24 hours"
         for datum, template in (("MLLW", f"{st}_2018_f36_MLLW_hc.html"), ("NAVD", f"{st}_2018_f36_hc.html")):
