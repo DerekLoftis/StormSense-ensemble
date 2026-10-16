@@ -1,0 +1,54 @@
+# Every 6 hours, fetch every surge guidance member, line them up with each gauge,
+# build the StormSense Ensemble pages and deploy them to GitHub Pages. Each run is
+# also archived as one tarball on that month's release (ensemble-YYYY-MM).
+name: Publish StormSense Ensemble
+
+on:
+  schedule:
+    - cron: "40 0,6,12,18 * * *"  # keep SCHEDULE in ensemble.py in step
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Fetch members, build and style the pages
+        run: |
+          set -o pipefail
+          python ensemble.py site work 2>&1 | tee build_log.txt
+      - name: Show the end of a failed build as an annotation
+        if: failure()
+        run: echo "::error title=build failed::$(tail -n 40 build_log.txt | sed ':a;N;$!ba;s/%/%25/g;s/\n/%0A/g')"
+      - name: Archive this run on the month's release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          f=$(ls work/archive/ensemble_*.tar.gz | head -n 1)
+          tag="ensemble-$(basename "$f" | cut -c10-16)"
+          gh release view "$tag" >/dev/null 2>&1 || \
+            gh release create "$tag" --title "$tag" --notes "StormSense Ensemble runs, one tarball per 6-hourly cycle."
+          gh release upload "$tag" "$f" --clobber
+      - run: cp build_log.txt site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
