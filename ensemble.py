@@ -33,6 +33,7 @@ sys.path.insert(0, HERE)
 import members as M  # noqa: E402
 import pages as P  # noqa: E402
 import petss  # noqa: E402
+import noaa_override  # noqa: E402
 
 TIDEWATCH_URL = os.environ.get("TIDEWATCH_URL", "https://web4.vims.edu/physical/tidewatch/")
 NAME = re.compile(r"^([A-Z0-9]+)_\d{4}_(f36|3d)(?:_(MLLW|NAVD))?(_hc\.html|\.csv)$")
@@ -267,6 +268,8 @@ def main(site="site", work="work"):
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     fetch_tidewatch(raw)
     f36, d3 = os.path.join(raw, "f36"), os.path.join(raw, "3d")
+    # CBBT, MNPT, DAHL, WADC: observations straight from NOAA CO-OPS (Tidewatch's are stale or aliased)
+    noaa_notes = noaa_override.apply({"f36": f36, "3d": d3}, f36)
     stations = {r["station"]: r for r in csv.DictReader(open(os.path.join(HERE, "stations.csv")))
                 if os.path.exists(os.path.join(f36, f"{r['station']}_2018_f36_MLLW.csv"))}
     print(f"{len(stations)} stations with Tidewatch files")
@@ -310,7 +313,7 @@ def main(site="site", work="work"):
                             "datum": by[st][2]} for k, (run, by) in raw_members.items() if st in by}
     style(raw, work, pages_dir)
     place(work, pages_dir, site)
-    finish(site, work, summary, raw_dump, raw_members, pet_cycle, updated, now)
+    finish(site, work, summary, raw_dump, raw_members, pet_cycle, updated, now, noaa_notes)
 
 
 def style(raw, work, pages_dir):
@@ -342,10 +345,10 @@ def place(work, pages_dir, site):
     shutil.copy(os.path.join(HERE, "stormsense_logo.png"), site)
 
 
-def finish(site, work, summary, raw_dump, raw_members, pet_cycle, updated, now):
+def finish(site, work, summary, raw_dump, raw_members, pet_cycle, updated, now, noaa_notes=None):
     runs = {k: (r.strftime("%Y-%m-%dT%H:%MZ") if r else None) for k, (r, _) in raw_members.items()}
     runs["petss"] = pet_cycle.strftime("%Y-%m-%dT%HZ") if pet_cycle else None
-    latest = {"updated": updated, "runs": runs, "stations": summary}
+    latest = {"updated": updated, "runs": runs, "stations": summary, "noaa_observations": noaa_notes or {}}
     json.dump(latest, open(os.path.join(site, "latest.json"), "w"), indent=1)
     write_index(site, summary, runs, updated)
     open(os.path.join(site, ".nojekyll"), "w").close()
