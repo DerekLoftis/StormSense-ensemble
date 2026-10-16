@@ -14,6 +14,8 @@ https://derekloftis.github.io/StormSense-ensemble/
 | stofs3d | STOFS-3D-Atlantic, 12Z run (AWS) | MLLW | yes |
 | cbofs | CBOFS station output within 3 km (AWS) | MSL | yes (dropped without overlap) |
 | nwm_short, nwm_medium | NWM coastal total water (AWS) | NAVD88 | yes |
+| etss | NWS ETSS East Coast surge bulletin (tgftp FQUS23 KWNO), added to the P-ETSS tide | MLLW | yes |
+| psurge | NHC P-Surge 50% storm tide (NOMADS SHEF), only while NHC has tropical advisories out | MLLW | yes |
 | nws | NWS official stage forecast (NWPS) | each gauge's datum | no |
 | tidewatch | Tidewatch f36 px30 | MLLW | no |
 | baseline | astro tide plus the last 3 h residual, decaying over 24 h | MLLW | n/a |
@@ -32,6 +34,8 @@ NAVD88 charts use Tidewatch's MLLW-NAVD88 offset for each station.
   CSV/JSON) on that month's release, `ensemble-YYYY-MM`
 
 ## Files
+
+CBBT, MNPT, DAHL and WADC observations come straight from NOAA CO-OPS (`noaa_override.py`), since Tidewatch's are stale or from another gauge.
 
 `ensemble.py` builds everything (`python ensemble.py site work`), `members.py` fetches the
 models, `petss.py` reads P-ETSS, `stations.csv` lists the stations and which members cover them,

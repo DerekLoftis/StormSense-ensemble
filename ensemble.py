@@ -4,11 +4,12 @@ one 72-hour chart, with CSV and JSON, plus an archive tarball of the run.
     python ensemble.py [site_dir] [work_dir]
 
 Members (each where it has a point for the station): NWS P-ETSS (mean and 10-90% cone),
-STOFS-2D-Global, STOFS-3D-Atlantic, CBOFS, NWM coastal short and medium range, the
-official NWS forecast, VIMS Tidewatch, and a tide-plus-persistence baseline.
+STOFS-2D-Global, STOFS-3D-Atlantic, CBOFS, NWM coastal short and medium range, NWS ETSS
+(surge bulletin on the P-ETSS tide), NHC P-Surge (50% level, only while NHC has tropical
+advisories out), the official NWS forecast, VIMS Tidewatch, and a tide-plus-persistence baseline.
 
 All members are put on the station's MLLW (Tidewatch's basis; NAVD88 charts subtract
-Tidewatch's MLLW-NAVD88 offset). The model guidance (P-ETSS, STOFS, CBOFS, NWM) is then
+Tidewatch's MLLW-NAVD88 offset). The model guidance (P-ETSS, STOFS, CBOFS, NWM, ETSS, P-Surge) is then
 lined up with the gauge: the median difference between the observations and the run over
 the overlap in the last 24 hours is added to the whole run, which removes datum offsets
 and standing biases. The official NWS and Tidewatch forecasts are already tied to the
@@ -34,6 +35,8 @@ import members as M  # noqa: E402
 import pages as P  # noqa: E402
 import petss  # noqa: E402
 import noaa_override  # noqa: E402
+import etss  # noqa: E402
+import psurge  # noqa: E402
 
 TIDEWATCH_URL = os.environ.get("TIDEWATCH_URL", "https://web4.vims.edu/physical/tidewatch/")
 NAME = re.compile(r"^([A-Z0-9]+)_\d{4}_(f36|3d)(?:_(MLLW|NAVD))?(_hc\.html|\.csv)$")
@@ -51,6 +54,8 @@ MEMBERS = {
     "cbofs": ("CBOFS", "#8c564b", "Solid", True),
     "nwm_short": ("NWM coastal (short range)", "#9467bd", "Solid", True),
     "nwm_medium": ("NWM coastal (medium range)", "#e377c2", "Solid", True),
+    "etss": ("NWS ETSS", "#17becf", "Solid", True),
+    "psurge": ("NHC P-Surge (50%)", "#d62728", "Solid", True),
     "nws": ("NWS official", "#000000", "Solid", False),
     "tidewatch": ("VIMS Tidewatch", "#2ca02c", "Solid", False),
     "baseline": ("Tide + persistence", "#7f7f7f", "ShortDash", False),
@@ -129,15 +134,16 @@ def alignment(obs, series, t_end):
     return float(np.median(ov[sel][ok] - m[ok]))
 
 
-def fetch_members(now, stations):
+def fetch_members(now, stations, jobs=None):
     """{member key: (run time, {station: (times, values ft, native datum)})} for the newest runs."""
     lid_st = {s["nws_lid"]: s["station"] for s in stations.values() if s["nws_lid"]}
     latlon = {s["station"]: (float(s["lat"]), float(s["lon"])) for s in stations.values() if s["lat"]}
     out = {}
-    jobs = {"stofs2d": lambda: M.stofs2d(now, set(lid_st)), "stofs3d": lambda: M.stofs3d(now, set(lid_st)),
+    jobs = jobs or {"stofs2d": lambda: M.stofs2d(now, set(lid_st)), "stofs3d": lambda: M.stofs3d(now, set(lid_st)),
             "nwm_short": lambda: M.nwm(now, set(lid_st), "short"),
             "nwm_medium": lambda: M.nwm(now, set(lid_st), "medium"),
-            "cbofs": lambda: M.cbofs(now, latlon), "nws": lambda: M.nws(set(lid_st))}
+            "cbofs": lambda: M.cbofs(now, latlon), "nws": lambda: M.nws(set(lid_st)),
+            "psurge": lambda: psurge.fetch(now, stations)}  # only while NHC has advisories out
     for key, job in jobs.items():
         try:
             run, ser, datum, prev = job()
@@ -281,6 +287,9 @@ def main(site="site", work="work"):
         print(f"petss: run {pet_cycle:%Y-%m-%d %HZ} at {len(pet)} gauges")
     except Exception as e:
         print("petss: unavailable", e)
+    # ETSS's bulletin is surge only: it rides on the P-ETSS (NOAA harmonic) tide
+    raw_members.update(fetch_members(now, stations, {
+        "etss": lambda: etss.fetch(now, stations, etss.tides_from_petss(pet, stations))}))
     pages_dir = os.path.join(work, "pages")
     os.makedirs(pages_dir)
     os.makedirs(os.path.join(site, "ens72"), exist_ok=True)
@@ -401,7 +410,7 @@ a{{color:#0d6e8a}}
 about {SCHEDULE}). Links keep the same address and are overwritten on each update; each run is also archived.</p>
 <p class="disc">Disclaimer: StormSense&trade; Predictive Plots are computer-generated operational storm tide forecasts;
 the user assumes any and all risk.</p>
-<p class="disc">Model guidance (P-ETSS, STOFS-2D, STOFS-3D, CBOFS, NWM) is lined up with each gauge: the median
+<p class="disc">Model guidance (P-ETSS, STOFS-2D, STOFS-3D, CBOFS, NWM, ETSS, P-Surge) is lined up with each gauge: the median
 difference from the observations over the last 24 hours is added to the whole run, removing datum offsets and standing
 bias. The official NWS and VIMS Tidewatch forecasts are shown as issued. Tide + persistence is the astronomical tide plus
 the last 3 hours' residual, fading over a day: the baseline a forecast should beat. Click a legend entry to hide or show it.</p>
