@@ -19,6 +19,7 @@ https://derekloftis.github.io/StormSense-ensemble/
 | nws | NWS official stage forecast (NWPS) | each gauge's datum | no |
 | tidewatch | Tidewatch f36 px30 | MLLW | no |
 | baseline | astro tide plus the last 3 h residual, decaying over 24 h | MLLW | n/a |
+| stormsense | StormSense's own forecast ([StormSense_forecastmodel](https://github.com/DerekLoftis/StormSense_forecastmodel)): its own harmonic tide plus the gauge's current residual handed over to a skill-weighted blend of the members above, with a 10-90% band (`stormsense_p10_ft`, `stormsense_p90_ft`, after the other columns) | MLLW | anchored to the gauge |
 
 Alignment: the median of (observed minus member) over the last 24 h of overlap (at least 30
 six-minute observations), using the newest run with the previous run stitched in front of it.

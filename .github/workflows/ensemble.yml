@@ -26,6 +26,12 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Check out the StormSense model (the stormsense member)
+        uses: actions/checkout@v4
+        continue-on-error: true  # without it the run goes on, minus that member
+        with:
+          repository: DerekLoftis/StormSense_forecastmodel
+          path: forecastmodel
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
