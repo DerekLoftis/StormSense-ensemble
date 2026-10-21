@@ -46,6 +46,17 @@ jobs:
           gh release view "$tag" >/dev/null 2>&1 || \
             gh release create "$tag" --title "$tag" --notes "StormSense Ensemble runs, one tarball per 6-hourly cycle."
           gh release upload "$tag" "$f" --clobber
+      # Skill of every member against the observations that came in since, and the phase 2 guidance
+      # pick that StormSense Latest reads (skill/pick.json). A failure here never stops the deploy.
+      - name: Score the archived runs and pick the guidance
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          f=$(ls work/archive/ensemble_*.tar.gz | head -n 1)
+          python skill.py site/skill work/skill "$f" 2>&1 | tee -a build_log.txt
+          gh release upload "ensemble-$(basename "$f" | cut -c10-16)" work/skill/skill_scores.csv.gz work/skill/skill_runs.csv --clobber
       - run: cp build_log.txt site/
       - uses: actions/upload-pages-artifact@v3
         with:

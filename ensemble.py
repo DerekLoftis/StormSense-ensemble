@@ -416,6 +416,8 @@ the user assumes any and all risk.</p>
 difference from the observations over the last 24 hours is added to the whole run, removing datum offsets and standing
 bias. The official NWS and VIMS Tidewatch forecasts are shown as issued. Tide + persistence is the astronomical tide plus
 the last 3 hours' residual, fading over a day: the baseline a forecast should beat. Click a legend entry to hide or show it.</p>
+<p class="disc"><a href="skill/">Skill of each forecast</a> against the observations that came in after it, and which
+guidance drives the primary StormSense forecast at each station.</p>
 <p class="disc">Newest runs used (UTC):</p><ul class="disc">{run_list}</ul>
 <div class="wrap"><table><thead><tr><th>Station</th><th>MLLW</th><th>NAVD88</th><th>Forecasts</th></tr></thead>
 <tbody>

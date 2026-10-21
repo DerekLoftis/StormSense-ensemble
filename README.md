@@ -41,5 +41,22 @@ CBBT, MNPT, DAHL and WADC observations come straight from NOAA CO-OPS (`noaa_ove
 models, `petss.py` reads P-ETSS, `stations.csv` lists the stations and which members cover them,
 `styler/` applies the StormSense chart style and NWS flood thresholds (`thresholds.json`).
 
+## Skill and the guidance pick (phase 2)
+
+`skill.py` runs after each archive upload (`python skill.py site/skill work/skill <new tarball>`). It scores every
+archived run against the observations that came in after it, per station, member and lead band (0-12, 12-36,
+36-72 h after the station's last observation, plus 0-36 and 0-72), once the band has passed, with Derek's skill
+S = 0.25[R² + e^(-|Bias|/σ) + e^(-MAE/σ) + e^(-RMSE/σ)], σ the population SD of the observations in the band.
+Truth is `observed_ft` stitched across the archived runs. The cumulative scores (`skill_scores.csv.gz`,
+`skill_runs.csv`) are kept on the month's release; the last 5 days of runs are rescored each time.
+
+Published under `skill/`: `index.html` (recent skill tables), `scores.csv` (every score, last 31 days),
+`summary.csv`/`summary.json` (10-day recent skill, weighted exp(-age/3 d)), `pick.json` and `picks_history.csv`.
+The pick per station and band is the member with the best recent skill; it must lead the current pick by 0.01 for
+two updates running before it switches, and stays on P-ETSS until 7 days of verified runs exist and the member has
+12 scores. Tidewatch, the baseline and the tide alone are scored but never picked, nor are stations whose Tidewatch
+observations are another gauge's (USSC, USAR, USCB, USNR, USSB, GS01, USBB). StormSense Latest reads `pick.json`
+when its `guidance.json` mode is `adaptive`.
+
 This is phase 1 of the design in the project's `stormsense-latest/ensemble_design.md`; skill-based
-selection of the primary StormSense guidance comes next.
+selection of the primary StormSense guidance (phase 2) is above.
