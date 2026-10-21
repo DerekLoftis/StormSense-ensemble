@@ -62,7 +62,7 @@ MEMBERS = {
     "baseline": ("Tide + persistence", "#7f7f7f", "ShortDash", False),
     "stormsense": ("StormSense model", "#e6007e", "Solid", False),
 }
-OWN = ["stormsense", "stormsense_p10", "stormsense_p90"]  # appended after the existing CSV columns
+OWN = ["stormsense", "stormsense_p10", "stormsense_p90", "stormsense_raw"]  # after the existing CSV columns
 UA = {"User-Agent": "stormsense-ensemble (VIMS)"}
 
 
@@ -300,7 +300,7 @@ def main(site="site", work="work"):
     os.makedirs(pages_dir)
     os.makedirs(os.path.join(site, "ens72"), exist_ok=True)
     summary, raw_dump = {}, {}
-    skill = SM.load_skill()
+    skill, past = SM.load_skill(), SM.load_past(work, now)
     for st, info in sorted(stations.items()):
         obs = series_csv(os.path.join(d3, f"{st}_2018_3d_MLLW.csv"), "feet")
         if obs is None or now - obs[0][-1] > timedelta(hours=12):
@@ -309,7 +309,7 @@ def main(site="site", work="work"):
         off = P.offset(f36, st)
         tw = series_csv(os.path.join(f36, f"{st}_2018_f36_MLLW.csv"), "px30")
         t0, grid, cols, notes = build_station(st, obs, off, raw_members, pet.get(info["nws_lid"]) or proxy.get(st), pet_cycle, tw)
-        SM.add(st, grid, t0, cols, notes, skill.get(st))
+        SM.add(st, grid, t0, cols, notes, skill.get(st), past)
         members_here = [MEMBERS[k][0] for k in MEMBERS if k in cols]
         guide = f"StormSense Ensemble: {len(members_here)} forecasts; model guidance lined up with the gauge's last 24 hours"
         for datum, template in (("MLLW", f"{st}_2018_f36_MLLW_hc.html"), ("NAVD", f"{st}_2018_f36_hc.html")):

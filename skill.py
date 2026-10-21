@@ -60,7 +60,8 @@ DEFAULT = "petss"
 NOT_MEMBERS = {"observed", "astro_tide"}
 # Members that can drive the primary forecast. Tidewatch is the other brand and the baseline and
 # the tide alone are references every forecast should beat; they are scored but never picked.
-REFERENCE = {"tidewatch", "baseline", "tide"}
+# stormsense_raw is StormSense before its site corrector, kept to check that the corrector helps.
+REFERENCE = {"tidewatch", "baseline", "tide", "stormsense_raw"}
 # Tidewatch publishes another gauge's observations under these ids (handoff aliasing check,
 # Oct 2026; USBB is held in ~18-min steps): scored for the record, never used to pick guidance.
 SUSPECT_OBS = {"USSC", "USAR", "USCB", "USNR", "USSB", "GS01", "USBB"}
@@ -68,7 +69,7 @@ NAMES = {"petss": "NWS P-ETSS", "stofs2d": "NOAA STOFS-2D-Global", "stofs3d": "N
          "cbofs": "NOAA CBOFS", "nwm_short": "NWM coastal (short range)", "nwm_medium": "NWM coastal (medium range)",
          "etss": "NWS ETSS", "psurge": "NHC P-Surge (50%)", "nws": "NWS official forecast",
          "tidewatch": "VIMS Tidewatch", "baseline": "Tide + persistence", "tide": "Astronomical tide only",
-         "stormsense": "StormSense"}
+         "stormsense": "StormSense", "stormsense_raw": "StormSense (uncorrected)"}
 SCORE_COLS = ["cycle", "station", "member", "member_run", "band", "t0", "lead_end", "N", "R2", "Bias", "MAE",
               "RMSE", "SDobs", "Skill", "PeakError", "ConeHit"]
 
