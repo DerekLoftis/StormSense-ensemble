@@ -26,11 +26,19 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Check out the StormSense model (the stormsense member)
+        uses: actions/checkout@v4
+        continue-on-error: true  # without it the run goes on, minus that member
+        with:
+          repository: DerekLoftis/StormSense_forecastmodel
+          path: forecastmodel
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Fetch members, build and style the pages
+        env:
+          GH_TOKEN: ${{ github.token }}  # lists the archived runs for the StormSense corrector
         run: |
           set -o pipefail
           python ensemble.py site work 2>&1 | tee build_log.txt

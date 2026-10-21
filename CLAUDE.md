@@ -55,6 +55,12 @@ GitHub cron starts late or skips sometimes; there is no fallback. Pages source i
   Tidewatch f36 px30, tide-plus-persistence baseline, ETSS (tgftp FQUS23 KWNO bulletin added to P-ETSS
   tide, 9-11 stations; NOMADS ETSS is 403 from Actions; runs high, e.g. SWPT 4.3 vs P-ETSS 3.6 ft), NHC
   P-Surge e50 (17 stations, only while NHC advisories are out). Details: README.md, NEW_MEMBERS.md.
+- `stormsense` member (StormSense's own forecast, code in public DerekLoftis/StormSense_forecastmodel,
+  checked out at forecastmodel/ by ensemble.yml; glue in `stormsense_member.py`): own UTide tide per gauge
+  (`harmonics/<ST>.json`, refit monthly by its harmonics.yml), the gauge's residual handed over (12 h) to a
+  1/RMSE^2 blend of the aligned members (weights from skill/summary.csv), then Derek's site predictor-corrector
+  (offset + surge scaling per lead band from the last week of archived runs, shrunk, capped 0.3 ft). Columns
+  `stormsense_ft`, `_p10_ft`, `_p90_ft`, `stormsense_raw_ft` (uncorrected; a skill.py REFERENCE, never picked).
 - Alignment: median(obs - member) over the last 24 h of overlap (>=30 six-minute obs), newest run with the
   previous one stitched in front. NWS and Tidewatch are not shifted.
 - Design and phases: `handoff/ensemble_design.md`. Phase 1 (StormSense-ensemble) is live. Phase 2 is built:
