@@ -1,4 +1,0 @@
-numpy
-pandas
-netCDF4
-utide
