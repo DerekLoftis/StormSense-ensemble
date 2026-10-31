@@ -1,0 +1,4 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+StormSense model,0-72 h,0.361,0.484,-0.311,0.356,0.489,11
+StormSense model (uncorrected),0-72 h,0.342,0.435,-0.238,0.443,0.574,11
+VIMS Tidewatch,0-30 h,0.121,0.198,-0.097,0.387,0.447,22

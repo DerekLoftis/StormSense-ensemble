@@ -1,0 +1,2 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+VIMS Tidewatch,0-30 h,0.801,0.938,0.157,0.271,0.322,20

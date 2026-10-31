@@ -1,0 +1,5 @@
+forecast,period,ss_skill,high_waters,peak_error_ft,peak_abs_error_ft,timing_error_min,timing_abs_error_min,action_hit,action_miss,action_fa,minor_hit,minor_miss,minor_fa,moderate_hit,moderate_miss,moderate_fa,major_hit,major_miss,major_fa
+NWS official forecast,0-66 h,0.945,7,0.161,0.329,-46,50,0,0,0,0,0,0,0,0,0,0,0,0
+NWS P-ETSS,0-66 h,0.865,7,0.34,0.396,-26,31,0,0,0,0,0,0,0,0,0,0,0,0
+NOAA CBOFS,0-36 h,0.858,22,0.278,0.311,-64,64,0,0,0,0,0,0,0,0,0,0,0,0
+NWM coastal (short range),0-6 h,0.822,7,0.073,0.548,-55,62,0,0,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,5 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+NWS official forecast,0-66 h,0.945,0.987,-0.004,0.081,0.107,1
+NWS P-ETSS,0-66 h,0.865,0.985,0.154,0.169,0.189,1
+NOAA CBOFS,0-36 h,0.858,0.959,-0.06,0.192,0.233,6
+NWM coastal (short range),0-6 h,0.822,0.988,-0.009,0.181,0.219,11

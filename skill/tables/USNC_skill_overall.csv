@@ -1,0 +1,10 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+NWS P-ETSS,0-66 h,0.888,0.967,0.039,0.172,0.206,7
+VIMS Tidewatch,0-30 h,0.878,0.973,0.007,0.161,0.194,39
+NWM coastal (medium range),0-72 h,0.824,0.945,0.107,0.26,0.321,37
+NWM coastal (short range),0-12 h,0.792,0.961,0.047,0.236,0.273,40
+Tide + persistence,0-72 h,0.761,0.927,0.283,0.307,0.379,6
+StormSense model,0-72 h,0.748,0.927,0.273,0.37,0.436,28
+StormSense model (uncorrected),0-72 h,0.743,0.921,0.295,0.389,0.455,28
+Astronomical tide only,0-72 h,0.72,0.957,0.396,0.396,0.44,6
+StormSense Latest (published),0-72 h,0.68,0.909,0.449,0.467,0.538,6

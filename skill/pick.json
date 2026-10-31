@@ -1,0 +1,2396 @@
+{
+ "updated": "2026-10-31 18:20 UTC",
+ "default": "petss",
+ "bands_h": [
+  "0-12",
+  "12-36",
+  "36-72"
+ ],
+ "rule": "Per station and lead band (hours after the last observation), the member with the best recent skill S = 0.25[R2 + e^(-|Bias|/sd) + e^(-MAE/sd) + e^(-RMSE/sd)] (mean over 10 days, weighted exp(-age/3 d)); it must lead the current pick by 0.01 for 2 updates running. P-ETSS until 7 days of verified runs exist and the member has 12 scores; Tidewatch, the baseline and the tide alone are never picked; stations whose archived observations were another gauge's (GS01, USAR, USBB, USCB, USNR, USSB, USSC) stay on P-ETSS.",
+ "names": {
+  "primary": "StormSense Latest (published)",
+  "stormsense": "StormSense model",
+  "stormsense_raw": "StormSense model (uncorrected)",
+  "petss": "NWS P-ETSS",
+  "stofs2d": "NOAA STOFS-2D-Global",
+  "stofs3d": "NOAA STOFS-3D-Atlantic",
+  "cbofs": "NOAA CBOFS",
+  "nwm_short": "NWM coastal (short range)",
+  "nwm_medium": "NWM coastal (medium range)",
+  "etss": "NWS ETSS",
+  "psurge": "NHC P-Surge (50%)",
+  "nws": "NWS official forecast",
+  "tidewatch": "VIMS Tidewatch",
+  "baseline": "Tide + persistence",
+  "tide": "Astronomical tide only"
+ },
+ "stations": {
+  "ALEV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.838,
+    "leader": "stormsense",
+    "leader_skill": 0.845,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ARPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.4,
+    "leader": "stormsense",
+    "leader_skill": 0.761,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "AXTV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.831,
+    "leader": "etss",
+    "leader_skill": 0.905,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BBIV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.72,
+    "leader": "petss",
+    "leader_skill": 0.72,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BISH": {
+   "0-12": {
+    "member": "nws",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.894,
+    "leader": "nws",
+    "leader_skill": 0.894,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.844,
+    "leader": "nws",
+    "leader_skill": 0.859,
+    "challenger": "nws",
+    "challenger_updates": 1
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.869,
+    "leader": "petss",
+    "leader_skill": 0.869,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BPAD": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.863,
+    "leader": "petss",
+    "leader_skill": 0.863,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BRDH": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T12Z",
+    "ready": true,
+    "skill": 0.891,
+    "leader": "petss",
+    "leader_skill": 0.891,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.876,
+    "leader": "petss",
+    "leader_skill": 0.876,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T12Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "petss",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CBBT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.938,
+    "leader": "petss",
+    "leader_skill": 0.938,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.93,
+    "leader": "petss",
+    "leader_skill": 0.93,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": true,
+    "skill": 0.933,
+    "leader": "petss",
+    "leader_skill": 0.933,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CCHV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.905,
+    "leader": "petss",
+    "leader_skill": 0.905,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CHIV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.742,
+    "leader": "nws",
+    "leader_skill": 0.934,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CNRC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.588,
+    "leader": "stormsense",
+    "leader_skill": 0.588,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T18Z",
+    "ready": true,
+    "skill": 0.338,
+    "leader": "stormsense",
+    "leader_skill": 0.34,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T18Z",
+    "ready": true,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CRSM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.875,
+    "leader": "petss",
+    "leader_skill": 0.875,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "DAHL": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.887,
+    "leader": "stofs2d",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.874,
+    "leader": "nws",
+    "leader_skill": 0.874,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-10-27T06Z",
+    "ready": true,
+    "skill": 0.911,
+    "leader": "nws",
+    "leader_skill": 0.911,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "DPCV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.928,
+    "leader": "petss",
+    "leader_skill": 0.928,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ELGV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.923,
+    "leader": "nws",
+    "leader_skill": 0.928,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "EZMV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.92,
+    "leader": "nws",
+    "leader_skill": 0.921,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "FEDV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": 0.503,
+    "leader": "stormsense",
+    "leader_skill": 0.747,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "GTND": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.857,
+    "leader": "nws",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "HPPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.913,
+    "leader": "petss",
+    "leader_skill": 0.913,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "IHDM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.805,
+    "leader": "stofs2d",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "JLMV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.835,
+    "leader": "petss",
+    "leader_skill": 0.835,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "JPHV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.363,
+    "leader": "stormsense",
+    "leader_skill": 0.861,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "KIPT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.941,
+    "leader": "petss",
+    "leader_skill": 0.941,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.921,
+    "leader": "petss",
+    "leader_skill": 0.921,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.933,
+    "leader": "petss",
+    "leader_skill": 0.933,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "KMNV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.898,
+    "leader": "petss",
+    "leader_skill": 0.898,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LCEV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.931,
+    "leader": "petss",
+    "leader_skill": 0.931,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LENM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.605,
+    "leader": "petss",
+    "leader_skill": 0.605,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LEWI": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T06Z",
+    "ready": true,
+    "skill": 0.86,
+    "leader": "petss",
+    "leader_skill": 0.86,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.828,
+    "leader": "nws",
+    "leader_skill": 0.828,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-10-31T12Z",
+    "ready": true,
+    "skill": 0.851,
+    "leader": "nws",
+    "leader_skill": 0.851,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LSPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "MNPT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.926,
+    "leader": "petss",
+    "leader_skill": 0.926,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.903,
+    "leader": "nws",
+    "leader_skill": 0.913,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.907,
+    "leader": "petss",
+    "leader_skill": 0.907,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "NRSV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.867,
+    "leader": "nws",
+    "leader_skill": 0.878,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ONAV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.773,
+    "leader": "petss",
+    "leader_skill": 0.773,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "PCCV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.931,
+    "leader": "petss",
+    "leader_skill": 0.931,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "PRTV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.848,
+    "leader": "nws",
+    "leader_skill": 0.875,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RAPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RDIV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.924,
+    "leader": "petss",
+    "leader_skill": 0.924,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RICV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.413,
+    "leader": "stormsense",
+    "leader_skill": 0.886,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SAXV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.894,
+    "leader": "stofs2d",
+    "leader_skill": 0.908,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SGSM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.838,
+    "leader": "stofs2d",
+    "leader_skill": 0.864,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SLIM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.828,
+    "leader": "stofs3d",
+    "leader_skill": 0.831,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SLRV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.909,
+    "leader": "petss",
+    "leader_skill": 0.909,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SMSV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.87,
+    "leader": "nws",
+    "leader_skill": 0.888,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SWPT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.926,
+    "leader": "etss",
+    "leader_skill": 0.926,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.905,
+    "leader": "petss",
+    "leader_skill": 0.905,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.912,
+    "leader": "petss",
+    "leader_skill": 0.912,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USAR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.875,
+    "leader": "petss",
+    "leader_skill": 0.875,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "cbofs",
+    "leader_skill": 0.828,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.716,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBB": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.258,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.217,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBC": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.926,
+    "leader": "petss",
+    "leader_skill": 0.926,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.751,
+    "leader": "stormsense",
+    "leader_skill": 0.751,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.742,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBK": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.872,
+    "leader": "stormsense",
+    "leader_skill": 0.872,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nwm_medium",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.834,
+    "leader": "nwm_medium",
+    "leader_skill": 0.834,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.832,
+    "leader": "nwm_medium",
+    "leader_skill": 0.832,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.919,
+    "leader": "petss",
+    "leader_skill": 0.919,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.763,
+    "leader": "stormsense",
+    "leader_skill": 0.763,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.755,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USFM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.92,
+    "leader": "stormsense",
+    "leader_skill": 0.92,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "etss",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.9,
+    "leader": "etss",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "stofs2d",
+    "leader_skill": 0.879,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USHR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T12Z",
+    "ready": true,
+    "skill": 0.92,
+    "leader": "petss",
+    "leader_skill": 0.92,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.901,
+    "leader": "petss",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-28T06Z",
+    "ready": true,
+    "skill": 0.903,
+    "leader": "petss",
+    "leader_skill": 0.903,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USJT": {
+   "0-12": {
+    "member": "stofs2d",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "stofs2d",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stofs2d",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.866,
+    "leader": "stofs2d",
+    "leader_skill": 0.866,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.874,
+    "leader": "stofs2d",
+    "leader_skill": 0.874,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLB": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.901,
+    "leader": "stormsense",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.844,
+    "leader": "stormsense",
+    "leader_skill": 0.844,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.827,
+    "leader": "nwm_medium",
+    "leader_skill": 0.827,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLI": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.88,
+    "leader": "petss",
+    "leader_skill": 0.88,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLN": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.824,
+    "leader": "stormsense",
+    "leader_skill": 0.824,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.771,
+    "leader": "petss",
+    "leader_skill": 0.771,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.735,
+    "leader": "petss",
+    "leader_skill": 0.735,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLN-X": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-28T18Z",
+    "ready": true,
+    "skill": 0.488,
+    "leader": "petss",
+    "leader_skill": 0.488,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.463,
+    "leader": "stormsense",
+    "leader_skill": 0.463,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-10-28T00Z",
+    "ready": true,
+    "skill": 0.534,
+    "leader": "stormsense",
+    "leader_skill": 0.534,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T12Z",
+    "ready": true,
+    "skill": 0.914,
+    "leader": "petss",
+    "leader_skill": 0.914,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.92,
+    "leader": "petss",
+    "leader_skill": 0.92,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.918,
+    "leader": "petss",
+    "leader_skill": 0.918,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USMB": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.894,
+    "leader": "stormsense",
+    "leader_skill": 0.894,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.785,
+    "leader": "stormsense",
+    "leader_skill": 0.785,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.726,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USNC": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.884,
+    "leader": "petss",
+    "leader_skill": 0.884,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nwm_medium",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.816,
+    "leader": "nwm_medium",
+    "leader_skill": 0.816,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.819,
+    "leader": "nwm_medium",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USNR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.677,
+    "leader": "stormsense",
+    "leader_skill": 0.849,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USPA": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.881,
+    "leader": "stormsense",
+    "leader_skill": 0.881,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.721,
+    "leader": "stormsense",
+    "leader_skill": 0.721,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.7,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USPT": {
+   "0-12": {
+    "member": "nws",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.923,
+    "leader": "nws",
+    "leader_skill": 0.923,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.925,
+    "leader": "nws",
+    "leader_skill": 0.925,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.91,
+    "leader": "petss",
+    "leader_skill": 0.91,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USSB": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.85,
+    "leader": "petss",
+    "leader_skill": 0.85,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.563,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.719,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USSF": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-27T18Z",
+    "ready": true,
+    "skill": 0.84,
+    "leader": "stormsense",
+    "leader_skill": 0.84,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.809,
+    "leader": "stormsense",
+    "leader_skill": 0.809,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-10-26T06Z",
+    "ready": true,
+    "skill": 0.809,
+    "leader": "nws",
+    "leader_skill": 0.809,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USTC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.887,
+    "leader": "stormsense",
+    "leader_skill": 0.887,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.849,
+    "leader": "stormsense",
+    "leader_skill": 0.849,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.841,
+    "leader": "nwm_medium",
+    "leader_skill": 0.841,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "VIMS": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WACH": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.927,
+    "leader": "petss",
+    "leader_skill": 0.927,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.922,
+    "leader": "petss",
+    "leader_skill": 0.922,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.923,
+    "leader": "petss",
+    "leader_skill": 0.923,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WADC": {
+   "0-12": {
+    "member": "etss",
+    "since": "2026-10-31T12Z",
+    "ready": true,
+    "skill": 0.892,
+    "leader": "etss",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.882,
+    "leader": "nws",
+    "leader_skill": 0.882,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.872,
+    "leader": "nws",
+    "leader_skill": 0.872,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WCKV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.859,
+    "leader": "petss",
+    "leader_skill": 0.859,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WMPT": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.887,
+    "leader": "stormsense",
+    "leader_skill": 0.887,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.852,
+    "leader": "nws",
+    "leader_skill": 0.852,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-10-29T00Z",
+    "ready": true,
+    "skill": 0.855,
+    "leader": "stofs2d",
+    "leader_skill": 0.855,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRDV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.9,
+    "leader": "petss",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRSV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.821,
+    "leader": "petss",
+    "leader_skill": 0.821,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRVV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.905,
+    "leader": "petss",
+    "leader_skill": 0.905,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WSPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": 0.521,
+    "leader": "stormsense",
+    "leader_skill": 0.904,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "YRCG": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.916,
+    "leader": "petss",
+    "leader_skill": 0.918,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.912,
+    "leader": "nws",
+    "leader_skill": 0.912,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.88,
+    "leader": "nws",
+    "leader_skill": 0.886,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  }
+ },
+ "ready_stations": [
+  "BISH",
+  "BRDH",
+  "CBBT",
+  "CNRC",
+  "DAHL",
+  "KIPT",
+  "LEWI",
+  "MNPT",
+  "SWPT",
+  "USBC",
+  "USBK",
+  "USBM",
+  "USFM",
+  "USHR",
+  "USJT",
+  "USLB",
+  "USLN",
+  "USLN-X",
+  "USLR",
+  "USMB",
+  "USNC",
+  "USPA",
+  "USPT",
+  "USSF",
+  "USTC",
+  "WACH",
+  "WADC",
+  "WMPT",
+  "YRCG"
+ ]
+}

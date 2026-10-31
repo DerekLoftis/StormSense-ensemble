@@ -1,0 +1,7 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+NWS P-ETSS,0-66 h,0.913,0.988,0.106,0.136,0.163,7
+Tide + persistence,0-72 h,0.788,0.951,0.313,0.334,0.406,6
+Astronomical tide only,0-72 h,0.754,0.971,0.419,0.419,0.462,6
+StormSense model,0-72 h,0.553,0.923,0.938,0.938,0.991,6
+StormSense Latest (published),0-72 h,0.552,0.929,0.946,0.946,0.995,6
+StormSense model (uncorrected),0-72 h,0.552,0.929,0.946,0.946,0.995,6

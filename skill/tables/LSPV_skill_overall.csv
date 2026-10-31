@@ -1,0 +1,2 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+NWM coastal (short range),0-12 h,0.692,0.897,-0.103,0.428,0.498,3
