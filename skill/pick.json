@@ -1,0 +1,2436 @@
+{
+ "updated": "2026-11-07 12:20 UTC",
+ "default": "petss",
+ "bands_h": [
+  "0-12",
+  "12-36",
+  "36-72"
+ ],
+ "rule": "Per station and lead band (hours after the last observation), the member with the best recent skill S = 0.25[R2 + e^(-|Bias|/sd) + e^(-MAE/sd) + e^(-RMSE/sd)] (mean over 10 days, weighted exp(-age/3 d)); it must lead the current pick by 0.01 for 2 updates running. P-ETSS until 7 days of verified runs exist and the member has 12 scores; Tidewatch, the baseline and the tide alone are never picked; stations whose archived observations were another gauge's (GS01, USAR, USBB, USCB, USNR, USSB, USSC) stay on P-ETSS.",
+ "names": {
+  "primary": "StormSense Latest (published)",
+  "stormsense": "StormSense model",
+  "stormsense_raw": "StormSense model (uncorrected)",
+  "petss": "NWS P-ETSS",
+  "stofs2d": "NOAA STOFS-2D-Global",
+  "stofs3d": "NOAA STOFS-3D-Atlantic",
+  "cbofs": "NOAA CBOFS",
+  "nwm_short": "NWM coastal (short range)",
+  "nwm_medium": "NWM coastal (medium range)",
+  "etss": "NWS ETSS",
+  "psurge": "NHC P-Surge (50%)",
+  "nws": "NWS official forecast",
+  "tidewatch": "VIMS Tidewatch",
+  "baseline": "Tide + persistence",
+  "tide": "Astronomical tide only"
+ },
+ "stations": {
+  "ALEV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.818,
+    "leader": "petss",
+    "leader_skill": 0.818,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.806,
+    "leader": "petss",
+    "leader_skill": 0.806,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.784,
+    "leader": "petss",
+    "leader_skill": 0.784,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ARPV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.846,
+    "leader": "stormsense",
+    "leader_skill": 0.846,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.695,
+    "leader": "stormsense",
+    "leader_skill": 0.695,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.596,
+    "leader": "stormsense",
+    "leader_skill": 0.596,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "AXTV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.875,
+    "leader": "etss",
+    "leader_skill": 0.878,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.845,
+    "leader": "stormsense",
+    "leader_skill": 0.845,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.819,
+    "leader": "stormsense",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BBIV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.687,
+    "leader": "petss",
+    "leader_skill": 0.687,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.686,
+    "leader": "petss",
+    "leader_skill": 0.686,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.71,
+    "leader": "petss",
+    "leader_skill": 0.71,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BISH": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.898,
+    "leader": "stormsense",
+    "leader_skill": 0.898,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-31T18Z",
+    "ready": true,
+    "skill": 0.859,
+    "leader": "nws",
+    "leader_skill": 0.859,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-02T18Z",
+    "ready": true,
+    "skill": 0.838,
+    "leader": "nws",
+    "leader_skill": 0.838,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BPAD": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.86,
+    "leader": "petss",
+    "leader_skill": 0.86,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.856,
+    "leader": "petss",
+    "leader_skill": 0.856,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.842,
+    "leader": "petss",
+    "leader_skill": 0.842,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "BRDH": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.9,
+    "leader": "stormsense",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "cbofs",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.85,
+    "leader": "cbofs",
+    "leader_skill": 0.85,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T12Z",
+    "ready": true,
+    "skill": 0.849,
+    "leader": "petss",
+    "leader_skill": 0.849,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CBBT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T18Z",
+    "ready": true,
+    "skill": 0.923,
+    "leader": "stormsense",
+    "leader_skill": 0.933,
+    "challenger": "stormsense",
+    "challenger_updates": 1
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.901,
+    "leader": "petss",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": true,
+    "skill": 0.916,
+    "leader": "petss",
+    "leader_skill": 0.916,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CCHV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.908,
+    "leader": "petss",
+    "leader_skill": 0.908,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.892,
+    "leader": "petss",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "petss",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CHIV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.924,
+    "leader": "stormsense",
+    "leader_skill": 0.924,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.898,
+    "leader": "stormsense",
+    "leader_skill": 0.898,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.88,
+    "leader": "stormsense",
+    "leader_skill": 0.882,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CNRC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.669,
+    "leader": "stormsense",
+    "leader_skill": 0.669,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-01T18Z",
+    "ready": true,
+    "skill": 0.453,
+    "leader": "stormsense",
+    "leader_skill": 0.453,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.375,
+    "leader": "stormsense",
+    "leader_skill": 0.375,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "CRSM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.887,
+    "leader": "stormsense",
+    "leader_skill": 0.887,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.862,
+    "leader": "stormsense",
+    "leader_skill": 0.862,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.837,
+    "leader": "nws",
+    "leader_skill": 0.837,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "DAHL": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.895,
+    "leader": "stormsense",
+    "leader_skill": 0.895,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stofs2d",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.863,
+    "leader": "stofs2d",
+    "leader_skill": 0.863,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-01T12Z",
+    "ready": true,
+    "skill": 0.854,
+    "leader": "stofs2d",
+    "leader_skill": 0.854,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "DPCV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.913,
+    "leader": "petss",
+    "leader_skill": 0.913,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.881,
+    "leader": "petss",
+    "leader_skill": 0.881,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.892,
+    "leader": "petss",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ELGV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.91,
+    "leader": "stormsense",
+    "leader_skill": 0.91,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "nws",
+    "leader_skill": 0.879,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "nws",
+    "leader_skill": 0.881,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "EZMV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T06Z",
+    "ready": true,
+    "skill": 0.932,
+    "leader": "stormsense",
+    "leader_skill": 0.932,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.9,
+    "leader": "stormsense",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.867,
+    "leader": "nwm_medium",
+    "leader_skill": 0.881,
+    "challenger": "nwm_medium",
+    "challenger_updates": 1
+   }
+  },
+  "FEDV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T18Z",
+    "ready": true,
+    "skill": 0.804,
+    "leader": "stormsense",
+    "leader_skill": 0.804,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.637,
+    "leader": "stormsense",
+    "leader_skill": 0.637,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.539,
+    "leader": "stormsense",
+    "leader_skill": 0.539,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "GTND": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.853,
+    "leader": "stormsense",
+    "leader_skill": 0.862,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.84,
+    "leader": "stormsense",
+    "leader_skill": 0.84,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.815,
+    "leader": "petss",
+    "leader_skill": 0.815,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "HPPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.88,
+    "leader": "petss",
+    "leader_skill": 0.88,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.853,
+    "leader": "petss",
+    "leader_skill": 0.853,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.878,
+    "leader": "petss",
+    "leader_skill": 0.878,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "IHDM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.814,
+    "leader": "stofs2d",
+    "leader_skill": 0.816,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stofs2d",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.809,
+    "leader": "stofs2d",
+    "leader_skill": 0.809,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.804,
+    "leader": "stofs2d",
+    "leader_skill": 0.804,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "JLMV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.877,
+    "leader": "stormsense",
+    "leader_skill": 0.877,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.807,
+    "leader": "petss",
+    "leader_skill": 0.807,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.819,
+    "leader": "petss",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "JPHV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.864,
+    "leader": "stormsense",
+    "leader_skill": 0.864,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.834,
+    "leader": "stormsense",
+    "leader_skill": 0.834,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.607,
+    "leader": "stormsense",
+    "leader_skill": 0.607,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "KIPT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.93,
+    "leader": "stormsense",
+    "leader_skill": 0.933,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.9,
+    "leader": "stormsense",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.902,
+    "leader": "petss",
+    "leader_skill": 0.902,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "KMNV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.892,
+    "leader": "petss",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.861,
+    "leader": "petss",
+    "leader_skill": 0.861,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.87,
+    "leader": "petss",
+    "leader_skill": 0.87,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LCEV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.907,
+    "leader": "stormsense",
+    "leader_skill": 0.913,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.875,
+    "leader": "nws",
+    "leader_skill": 0.882,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.882,
+    "leader": "petss",
+    "leader_skill": 0.882,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LENM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.718,
+    "leader": "stormsense",
+    "leader_skill": 0.718,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.663,
+    "leader": "petss",
+    "leader_skill": 0.663,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.655,
+    "leader": "petss",
+    "leader_skill": 0.655,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LEWI": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.865,
+    "leader": "stormsense",
+    "leader_skill": 0.865,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stofs2d",
+    "since": "2026-11-03T00Z",
+    "ready": true,
+    "skill": 0.833,
+    "leader": "stofs2d",
+    "leader_skill": 0.833,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.806,
+    "leader": "stofs2d",
+    "leader_skill": 0.806,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "LSPV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": true,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T18Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": NaN,
+    "leader_skill": NaN,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "MNPT": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T18Z",
+    "ready": true,
+    "skill": 0.916,
+    "leader": "stormsense",
+    "leader_skill": 0.925,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.899,
+    "leader": "stormsense",
+    "leader_skill": 0.899,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.897,
+    "leader": "petss",
+    "leader_skill": 0.897,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "NRSV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "stormsense",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.851,
+    "leader": "nwm_medium",
+    "leader_skill": 0.867,
+    "challenger": "nwm_medium",
+    "challenger_updates": 1
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.858,
+    "leader": "petss",
+    "leader_skill": 0.858,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "ONAV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T06Z",
+    "ready": true,
+    "skill": 0.841,
+    "leader": "stormsense",
+    "leader_skill": 0.841,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.732,
+    "leader": "stormsense",
+    "leader_skill": 0.734,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.757,
+    "leader": "petss",
+    "leader_skill": 0.757,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "PCCV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.909,
+    "leader": "petss",
+    "leader_skill": 0.909,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.876,
+    "leader": "petss",
+    "leader_skill": 0.876,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.888,
+    "leader": "petss",
+    "leader_skill": 0.888,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "PRTV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.865,
+    "leader": "stormsense",
+    "leader_skill": 0.865,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "cbofs",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.836,
+    "leader": "cbofs",
+    "leader_skill": 0.836,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.793,
+    "leader": "nws",
+    "leader_skill": 0.793,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RAPV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.855,
+    "leader": "stormsense",
+    "leader_skill": 0.855,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-11-06T18Z",
+    "ready": true,
+    "skill": 0.784,
+    "leader": "nws",
+    "leader_skill": 0.784,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": 0.783,
+    "leader": "stormsense",
+    "leader_skill": 0.795,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RDIV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.906,
+    "leader": "petss",
+    "leader_skill": 0.906,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "petss",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.914,
+    "leader": "petss",
+    "leader_skill": 0.914,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "RICV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "stormsense",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.831,
+    "leader": "stormsense",
+    "leader_skill": 0.831,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.785,
+    "leader": "stormsense",
+    "leader_skill": 0.785,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SAXV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T00Z",
+    "ready": true,
+    "skill": 0.895,
+    "leader": "stormsense",
+    "leader_skill": 0.895,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.873,
+    "leader": "stormsense",
+    "leader_skill": 0.873,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.864,
+    "leader": "stofs2d",
+    "leader_skill": 0.864,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SGSM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.869,
+    "leader": "stormsense",
+    "leader_skill": 0.869,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T18Z",
+    "ready": true,
+    "skill": 0.845,
+    "leader": "stormsense",
+    "leader_skill": 0.845,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.833,
+    "leader": "stofs2d",
+    "leader_skill": 0.833,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SLIM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.843,
+    "leader": "stormsense",
+    "leader_skill": 0.843,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.811,
+    "leader": "nws",
+    "leader_skill": 0.811,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.764,
+    "leader": "stofs2d",
+    "leader_skill": 0.764,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SLRV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.9,
+    "leader": "petss",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.864,
+    "leader": "petss",
+    "leader_skill": 0.864,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.874,
+    "leader": "petss",
+    "leader_skill": 0.874,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SMSV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "stormsense",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.872,
+    "leader": "stormsense",
+    "leader_skill": 0.872,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.87,
+    "leader": "petss",
+    "leader_skill": 0.87,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "SWPT": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.939,
+    "leader": "stormsense",
+    "leader_skill": 0.939,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.901,
+    "leader": "stormsense",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": true,
+    "skill": 0.892,
+    "leader": "petss",
+    "leader_skill": 0.892,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USAR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.866,
+    "leader": "petss",
+    "leader_skill": 0.866,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.826,
+    "leader": "cbofs",
+    "leader_skill": 0.849,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.807,
+    "leader": "petss",
+    "leader_skill": 0.807,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBB": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.132,
+    "leader": "stormsense",
+    "leader_skill": 0.14,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.165,
+    "leader": "stormsense",
+    "leader_skill": 0.166,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": NaN,
+    "leader": "stormsense",
+    "leader_skill": 0.072,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBC": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.91,
+    "leader": "petss",
+    "leader_skill": 0.91,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "petss",
+    "leader_skill": 0.879,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-02T12Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "petss",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBK": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.902,
+    "leader": "stormsense",
+    "leader_skill": 0.902,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nwm_medium",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.863,
+    "leader": "nwm_medium",
+    "leader_skill": 0.863,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.86,
+    "leader": "nwm_medium",
+    "leader_skill": 0.86,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USBM": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.906,
+    "leader": "petss",
+    "leader_skill": 0.906,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "petss",
+    "leader_skill": 0.879,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-02T12Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "petss",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USFM": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.939,
+    "leader": "stormsense",
+    "leader_skill": 0.939,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.904,
+    "leader": "stormsense",
+    "leader_skill": 0.904,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "etss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.878,
+    "leader": "nwm_medium",
+    "leader_skill": 0.883,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USHR": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.915,
+    "leader": "stormsense",
+    "leader_skill": 0.915,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nwm_medium",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.884,
+    "leader": "nwm_medium",
+    "leader_skill": 0.884,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-28T06Z",
+    "ready": true,
+    "skill": 0.882,
+    "leader": "petss",
+    "leader_skill": 0.882,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USJT": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-02T00Z",
+    "ready": true,
+    "skill": 0.902,
+    "leader": "stormsense",
+    "leader_skill": 0.902,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stofs2d",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "stofs2d",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-11-07T06Z",
+    "ready": true,
+    "skill": 0.867,
+    "leader": "stofs2d",
+    "leader_skill": 0.867,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLB": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.896,
+    "leader": "stormsense",
+    "leader_skill": 0.896,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.866,
+    "leader": "stormsense",
+    "leader_skill": 0.866,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.844,
+    "leader": "petss",
+    "leader_skill": 0.844,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLI": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "stormsense",
+    "leader_skill": 0.887,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.855,
+    "leader": "petss",
+    "leader_skill": 0.855,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.863,
+    "leader": "nws",
+    "leader_skill": 0.874,
+    "challenger": "nws",
+    "challenger_updates": 1
+   }
+  },
+  "USLN": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.856,
+    "leader": "stormsense",
+    "leader_skill": 0.856,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.75,
+    "leader": "petss",
+    "leader_skill": 0.75,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-31T06Z",
+    "ready": true,
+    "skill": 0.761,
+    "leader": "petss",
+    "leader_skill": 0.761,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLN-X": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-28T18Z",
+    "ready": true,
+    "skill": 0.715,
+    "leader": "petss",
+    "leader_skill": 0.715,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-11-03T06Z",
+    "ready": true,
+    "skill": 0.645,
+    "leader": "petss",
+    "leader_skill": 0.645,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-03T00Z",
+    "ready": true,
+    "skill": 0.642,
+    "leader": "petss",
+    "leader_skill": 0.642,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USLR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T12Z",
+    "ready": true,
+    "skill": 0.912,
+    "leader": "stormsense",
+    "leader_skill": 0.915,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "petss",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.91,
+    "leader": "petss",
+    "leader_skill": 0.91,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USMB": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.866,
+    "leader": "stormsense",
+    "leader_skill": 0.866,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.839,
+    "leader": "stormsense",
+    "leader_skill": 0.839,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-02T12Z",
+    "ready": true,
+    "skill": 0.817,
+    "leader": "petss",
+    "leader_skill": 0.817,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USNC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.893,
+    "leader": "stormsense",
+    "leader_skill": 0.893,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.833,
+    "leader": "nwm_medium",
+    "leader_skill": 0.836,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-02T12Z",
+    "ready": true,
+    "skill": 0.879,
+    "leader": "petss",
+    "leader_skill": 0.879,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USNR": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.743,
+    "leader": "stormsense",
+    "leader_skill": 0.883,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.738,
+    "leader": "stormsense",
+    "leader_skill": 0.869,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.768,
+    "leader": "stormsense",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USPA": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.864,
+    "leader": "stormsense",
+    "leader_skill": 0.864,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.779,
+    "leader": "petss",
+    "leader_skill": 0.779,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-11-02T12Z",
+    "ready": true,
+    "skill": 0.815,
+    "leader": "petss",
+    "leader_skill": 0.815,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USPT": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T18Z",
+    "ready": true,
+    "skill": 0.926,
+    "leader": "stormsense",
+    "leader_skill": 0.926,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.895,
+    "leader": "nws",
+    "leader_skill": 0.895,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-02T06Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "nws",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USSB": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.791,
+    "leader": "stormsense",
+    "leader_skill": 0.843,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.746,
+    "leader": "petss",
+    "leader_skill": 0.746,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-16T00Z",
+    "ready": false,
+    "skill": 0.752,
+    "leader": "petss",
+    "leader_skill": 0.752,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USSF": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-27T18Z",
+    "ready": true,
+    "skill": 0.887,
+    "leader": "stormsense",
+    "leader_skill": 0.887,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-10-26T12Z",
+    "ready": true,
+    "skill": 0.871,
+    "leader": "stormsense",
+    "leader_skill": 0.871,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-03T00Z",
+    "ready": true,
+    "skill": 0.816,
+    "leader": "stormsense",
+    "leader_skill": 0.816,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "USTC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.877,
+    "leader": "stormsense",
+    "leader_skill": 0.877,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nwm_medium",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.859,
+    "leader": "nwm_medium",
+    "leader_skill": 0.859,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nwm_medium",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.851,
+    "leader": "nwm_medium",
+    "leader_skill": 0.851,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "VIMS": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": true,
+    "skill": 0.915,
+    "leader": "stormsense",
+    "leader_skill": 0.919,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-11-06T18Z",
+    "ready": true,
+    "skill": 0.895,
+    "leader": "stormsense",
+    "leader_skill": 0.9,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-29T00Z",
+    "ready": false,
+    "skill": 0.87,
+    "leader": "nws",
+    "leader_skill": 0.889,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WACH": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.928,
+    "leader": "petss",
+    "leader_skill": 0.928,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-30T00Z",
+    "ready": true,
+    "skill": 0.899,
+    "leader": "petss",
+    "leader_skill": 0.899,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-31T00Z",
+    "ready": true,
+    "skill": 0.902,
+    "leader": "petss",
+    "leader_skill": 0.902,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WADC": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-03T18Z",
+    "ready": true,
+    "skill": 0.881,
+    "leader": "stormsense",
+    "leader_skill": 0.881,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.867,
+    "leader": "stormsense",
+    "leader_skill": 0.867,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.841,
+    "leader": "stormsense",
+    "leader_skill": 0.841,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WCKV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T06Z",
+    "ready": true,
+    "skill": 0.826,
+    "leader": "stormsense",
+    "leader_skill": 0.826,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.757,
+    "leader": "petss",
+    "leader_skill": 0.757,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.759,
+    "leader": "petss",
+    "leader_skill": 0.759,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WMPT": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-10-25T12Z",
+    "ready": true,
+    "skill": 0.888,
+    "leader": "stormsense",
+    "leader_skill": 0.888,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "cbofs",
+    "since": "2026-11-04T06Z",
+    "ready": true,
+    "skill": 0.834,
+    "leader": "stofs2d",
+    "leader_skill": 0.839,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "stofs2d",
+    "since": "2026-10-29T00Z",
+    "ready": true,
+    "skill": 0.832,
+    "leader": "stofs2d",
+    "leader_skill": 0.832,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRDV": {
+   "0-12": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.88,
+    "leader": "petss",
+    "leader_skill": 0.88,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.857,
+    "leader": "petss",
+    "leader_skill": 0.857,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.876,
+    "leader": "petss",
+    "leader_skill": 0.876,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRSV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.845,
+    "leader": "stormsense",
+    "leader_skill": 0.845,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.801,
+    "leader": "petss",
+    "leader_skill": 0.801,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.819,
+    "leader": "petss",
+    "leader_skill": 0.819,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WRVV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-05T00Z",
+    "ready": true,
+    "skill": 0.896,
+    "leader": "stormsense",
+    "leader_skill": 0.896,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-06T12Z",
+    "ready": true,
+    "skill": 0.88,
+    "leader": "stormsense",
+    "leader_skill": 0.88,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "petss",
+    "since": "2026-10-27T12Z",
+    "ready": true,
+    "skill": 0.856,
+    "leader": "stofs2d",
+    "leader_skill": 0.865,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "WSPV": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-04T12Z",
+    "ready": true,
+    "skill": 0.886,
+    "leader": "stormsense",
+    "leader_skill": 0.886,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "stormsense",
+    "since": "2026-11-05T12Z",
+    "ready": true,
+    "skill": 0.856,
+    "leader": "stormsense",
+    "leader_skill": 0.856,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.839,
+    "leader": "nws",
+    "leader_skill": 0.839,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  },
+  "YRCG": {
+   "0-12": {
+    "member": "stormsense",
+    "since": "2026-11-07T00Z",
+    "ready": true,
+    "skill": 0.932,
+    "leader": "stormsense",
+    "leader_skill": 0.932,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "12-36": {
+    "member": "nws",
+    "since": "2026-10-30T12Z",
+    "ready": true,
+    "skill": 0.896,
+    "leader": "stormsense",
+    "leader_skill": 0.901,
+    "challenger": NaN,
+    "challenger_updates": 0
+   },
+   "36-72": {
+    "member": "nws",
+    "since": "2026-11-01T00Z",
+    "ready": true,
+    "skill": 0.89,
+    "leader": "nws",
+    "leader_skill": 0.89,
+    "challenger": NaN,
+    "challenger_updates": 0
+   }
+  }
+ },
+ "ready_stations": [
+  "ALEV",
+  "ARPV",
+  "AXTV",
+  "BBIV",
+  "BISH",
+  "BPAD",
+  "BRDH",
+  "CBBT",
+  "CCHV",
+  "CHIV",
+  "CNRC",
+  "CRSM",
+  "DAHL",
+  "DPCV",
+  "ELGV",
+  "EZMV",
+  "FEDV",
+  "GTND",
+  "HPPV",
+  "IHDM",
+  "JLMV",
+  "JPHV",
+  "KIPT",
+  "KMNV",
+  "LCEV",
+  "LENM",
+  "LEWI",
+  "LSPV",
+  "MNPT",
+  "NRSV",
+  "ONAV",
+  "PCCV",
+  "PRTV",
+  "RAPV",
+  "RDIV",
+  "RICV",
+  "SAXV",
+  "SGSM",
+  "SLIM",
+  "SLRV",
+  "SMSV",
+  "SWPT",
+  "USBC",
+  "USBK",
+  "USBM",
+  "USFM",
+  "USHR",
+  "USJT",
+  "USLB",
+  "USLI",
+  "USLN",
+  "USLN-X",
+  "USLR",
+  "USMB",
+  "USNC",
+  "USPA",
+  "USPT",
+  "USSF",
+  "USTC",
+  "VIMS",
+  "WACH",
+  "WADC",
+  "WCKV",
+  "WMPT",
+  "WRDV",
+  "WRSV",
+  "WRVV",
+  "WSPV",
+  "YRCG"
+ ]
+}
