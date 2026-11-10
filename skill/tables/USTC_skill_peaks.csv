@@ -1,0 +1,10 @@
+forecast,period,ss_skill,high_waters,peak_error_ft,peak_abs_error_ft,timing_error_min,timing_abs_error_min,action_hit,action_miss,action_fa,minor_hit,minor_miss,minor_fa,moderate_hit,moderate_miss,moderate_fa,major_hit,major_miss,major_fa
+StormSense model,0-72 h,0.855,232,-0.047,0.139,0,10,0,0,0,0,0,0,0,0,0,0,0,0
+StormSense Latest (published),0-72 h,0.841,232,-0.112,0.173,2,13,0,0,0,0,0,0,0,0,0,0,0,0
+NWM coastal (medium range),0-72 h,0.833,232,-0.17,0.209,3,16,0,0,0,0,0,0,0,0,0,0,0,0
+VIMS Tidewatch,0-30 h,0.823,93,-0.0,0.216,-8,15,0,0,0,0,0,0,0,0,0,0,0,0
+StormSense model (uncorrected),0-72 h,0.793,232,0.061,0.164,4,12,0,0,0,0,0,0,0,0,0,0,0,0
+NWM coastal (short range),0-6 h,0.791,23,-0.243,0.243,8,14,0,0,0,0,0,0,0,0,0,0,0,0
+NWS P-ETSS,0-66 h,0.7,203,-0.031,0.176,-45,45,0,0,0,0,0,0,0,0,0,0,0,0
+Tide + persistence,0-72 h,0.682,232,0.3,0.356,-8,12,0,0,0,0,0,0,0,0,0,0,0,0
+Astronomical tide only,0-72 h,0.627,232,0.443,0.467,-9,12,0,0,0,0,0,0,0,0,0,0,0,0
