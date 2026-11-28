@@ -1,0 +1,7173 @@
+{
+ "updated": "2026-11-28 18:20 UTC",
+ "cycle": "2026-11-28T18Z",
+ "obs_basis": "stormsense",
+ "runs": {
+  "stofs2d": "2026-11-28T06:00Z",
+  "stofs3d": "2026-11-27T12:00Z",
+  "nwm_short": "2026-11-28T12:00Z",
+  "nwm_medium": "2026-11-28T06:00Z",
+  "cbofs": "2026-11-28T12:00Z",
+  "nws": "2026-11-28T14:55Z",
+  "psurge": null,
+  "petss": "2026-11-28T12Z",
+  "etss": "2026-11-28T12Z"
+ },
+ "stations": {
+  "ALEV": {
+   "t0": "2026-11-28T17:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.893,
+     "point": "8634214"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.154,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.705,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.877,
+     "native_datum": "MSL"
+    },
+    "baseline": {
+     "residual_ft": -0.769,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.872,
+     "members": [
+      "petss",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": 0.564,
+      "cbofs": -0.143,
+      "nwm_short": 0.54,
+      "nwm_medium": -0.57
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.013,
+        "fit_b": -0.067,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.031,
+        "fit_b": 0.073,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.424,
+        "fit_b": -0.124,
+        "a_ft": 0.142,
+        "b": -0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:01652545",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.74,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.044,
+    "minor": 0.004,
+    "moderate": 0.0,
+    "major": 0.0
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "ARPV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 5.73,
+     "point": "8637712"
+    },
+    "baseline": {
+     "residual_ft": 4.748,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": 5.067,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": 2.732
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.394,
+        "fit_b": 0.058,
+        "a_ft": 0.081,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 1.579,
+        "fit_b": -0.185,
+        "a_ft": 0.25,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 2.265,
+        "fit_b": -0.68,
+        "a_ft": 0.25,
+        "b": -0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:ARPV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 3.676,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.398,
+    "minor": 0.055
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T00:00:00Z",
+      "xhw_ft": 9.66
+     },
+     {
+      "date_time_z": "2026-11-29T12:18:00Z",
+      "xhw_ft": 8.18
+     },
+     {
+      "date_time_z": "2026-11-30T01:12:00Z",
+      "xhw_ft": 8.58
+     },
+     {
+      "date_time_z": "2026-11-30T13:24:00Z",
+      "xhw_ft": 7.98
+     },
+     {
+      "date_time_z": "2026-12-01T02:18:00Z",
+      "xhw_ft": 7.99
+     },
+     {
+      "date_time_z": "2026-12-01T14:36:00Z",
+      "xhw_ft": 8.11
+     }
+    ],
+    "NAVD": [
+     {
+      "date_time_z": "2026-11-29T00:00:00Z",
+      "xhw_ft": 7.86
+     }
+    ]
+   }
+  },
+  "AXTV": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 1.322,
+     "point": "8634214"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -1.31,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.993,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.634,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.047,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.427,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.826,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.833,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": 0.526,
+      "stofs2d": -0.052,
+      "cbofs": 0.056,
+      "nwm_short": 0.39,
+      "nwm_medium": -0.416,
+      "etss": -1.344,
+      "nws": 0.0
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.084,
+        "fit_b": 0.052,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.183,
+        "fit_b": 0.283,
+        "a_ft": -0.028,
+        "b": 0.16,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.12,
+        "fit_b": 0.327,
+        "a_ft": 0.0,
+        "b": 0.152,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0165258890",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.198,
+   "guidance": {
+    "0-12": "stofs2d",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.264,
+    "minor": 0.092,
+    "moderate": 0.035,
+    "major": 0.007
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "BBIV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.057,
+     "point": "est2340"
+    },
+    "baseline": {
+     "residual_ft": -0.933,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.768,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.217
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.13,
+        "fit_b": 0.223,
+        "a_ft": -0.067,
+        "b": 0.139,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.208,
+        "fit_b": 0.535,
+        "a_ft": -0.127,
+        "b": 0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.189,
+        "fit_b": 0.932,
+        "a_ft": -0.107,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:BBIV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.031,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.254,
+    "minor": 0.149,
+    "moderate": 0.043,
+    "major": 0.018
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T06:18:00Z",
+      "xhw_ft": 2.5
+     },
+     {
+      "date_time_z": "2026-11-29T18:42:00Z",
+      "xhw_ft": 2.64
+     },
+     {
+      "date_time_z": "2026-11-30T07:06:00Z",
+      "xhw_ft": 2.56
+     },
+     {
+      "date_time_z": "2026-11-30T19:42:00Z",
+      "xhw_ft": 2.44
+     },
+     {
+      "date_time_z": "2026-12-01T08:24:00Z",
+      "xhw_ft": 2.74
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "BISH": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.003,
+     "point": "8571421"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.611,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.034,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": -0.265,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.771,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.014,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.613,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.517,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.768,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.777,
+      "stofs2d": 0.044,
+      "stofs3d": -0.0,
+      "cbofs": 0.0,
+      "nwm_short": -0.332,
+      "nwm_medium": -0.137,
+      "etss": -0.589,
+      "nws": -0.529
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.024,
+        "fit_b": -0.031,
+        "a_ft": -0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.081,
+        "fit_b": 0.032,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.095,
+        "fit_b": 0.247,
+        "a_ft": -0.0,
+        "b": 0.133,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8571421",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.707,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.2,
+    "minor": 0.153,
+    "moderate": 0.084,
+    "major": 0.039
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "BPAD": {
+   "t0": "2026-11-28T17:30:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.083,
+     "point": "8594900"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.374,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.899,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.091,
+     "native_datum": "MSL"
+    },
+    "baseline": {
+     "residual_ft": -0.608,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.663,
+     "members": [
+      "petss",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.677,
+      "cbofs": -0.054,
+      "nwm_short": 0.49,
+      "nwm_medium": -0.517
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.045,
+        "fit_b": -0.077,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.042,
+        "fit_b": 0.064,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.431,
+        "fit_b": -0.114,
+        "a_ft": 0.151,
+        "b": -0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:30Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:BPAD2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.922,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "CBBT": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.007,
+     "point": "8638901"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.449,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.019,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.423,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.978,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.107,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.126,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.805,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.639,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.698,
+      "stofs2d": -0.035,
+      "stofs3d": 0.0,
+      "cbofs": 0.022,
+      "nwm_short": 0.23,
+      "nwm_medium": -0.25,
+      "etss": -0.473,
+      "nws": 0.215
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 27,
+      "bands": {
+       "0-12": {
+        "runs": 27,
+        "fit_a_ft": 0.013,
+        "fit_b": -0.016,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 25,
+        "fit_a_ft": 0.094,
+        "fit_b": 0.08,
+        "a_ft": 0.042,
+        "b": 0.019,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 21,
+        "fit_a_ft": 0.252,
+        "fit_b": 0.111,
+        "a_ft": 0.16,
+        "b": 0.036,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8638901",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.104,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.089,
+    "minor": 0.05,
+    "moderate": 0.031,
+    "major": 0.025
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "CHIV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.669,
+     "point": "8631044"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.72,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.146,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.354,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.575,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.565,
+     "members": [
+      "petss",
+      "stofs2d",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.321,
+      "stofs2d": -0.032,
+      "nwm_short": 0.017,
+      "nwm_medium": -0.281,
+      "nws": -0.246
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.026,
+        "fit_b": -0.053,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.109,
+        "fit_b": 0.012,
+        "a_ft": 0.033,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.244,
+        "fit_b": 0.035,
+        "a_ft": 0.148,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:CHIV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.764,
+   "guidance": {
+    "0-12": "nwm_medium",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.291,
+    "minor": 0.076,
+    "moderate": 0.044,
+    "major": 0.024
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": [
+     {
+      "date_time_z": "2026-11-29T16:00:00Z",
+      "xhw_ft": 1.53
+     }
+    ]
+   }
+  },
+  "CNRC": {
+   "t0": "2026-11-28T12:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.698,
+     "point": "8635027"
+    },
+    "baseline": {
+     "residual_ft": -0.334,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.521,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.748
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 18,
+      "bands": {
+       "0-12": {
+        "runs": 18,
+        "fit_a_ft": -0.108,
+        "fit_b": 0.091,
+        "a_ft": -0.0,
+        "b": 0.022,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 16,
+        "fit_a_ft": -0.296,
+        "fit_b": 0.521,
+        "a_ft": -0.123,
+        "b": 0.291,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 12,
+        "fit_a_ft": -0.08,
+        "fit_b": 0.389,
+        "a_ft": -0.0,
+        "b": 0.17,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "archive:greenstream/CNRC",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 0.829,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "CRSM": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.004,
+     "point": "8571091"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.724,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.962,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.472,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.71,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.861,
+     "members": [
+      "petss",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.65,
+      "cbofs": -0.138,
+      "nwm_short": -0.243,
+      "nwm_medium": -0.185,
+      "nws": -0.29
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.046,
+        "fit_b": 0.03,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.068,
+        "fit_b": 0.109,
+        "a_ft": -0.0,
+        "b": 0.037,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.088,
+        "fit_b": 0.293,
+        "a_ft": -0.0,
+        "b": 0.16,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:01485755",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.633,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.191,
+    "minor": 0.098,
+    "moderate": 0.047,
+    "major": 0.018
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "DAHL": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.002,
+     "point": "8635027"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.039,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": -0.336,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.1,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.086,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.719,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.632,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.761,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.869,
+      "stofs2d": 0.066,
+      "stofs3d": 0.0,
+      "cbofs": -0.103,
+      "nwm_short": -0.634,
+      "nwm_medium": -0.019,
+      "nws": -0.23
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.099,
+        "fit_b": 0.083,
+        "a_ft": -0.052,
+        "b": 0.046,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.178,
+        "fit_b": 0.244,
+        "a_ft": -0.099,
+        "b": 0.158,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.0,
+        "fit_b": 0.379,
+        "a_ft": 0.0,
+        "b": 0.244,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8635027",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.738,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.175,
+    "minor": 0.105,
+    "moderate": 0.017,
+    "major": 0.006
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "DPCV": {
+   "t0": "2026-11-28T17:30:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.032,
+     "point": "8639348"
+    },
+    "baseline": {
+     "residual_ft": -1.126,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.058,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.856
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.053,
+        "fit_b": 0.025,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.196,
+        "fit_b": 0.069,
+        "a_ft": 0.109,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.384,
+        "fit_b": 0.228,
+        "a_ft": 0.248,
+        "b": 0.137,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:30Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:DPCV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.46,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "ELGV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.053,
+     "point": "est2337"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.023,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.959,
+     "members": [
+      "petss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.092,
+      "nws": 0.236
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.049,
+        "fit_b": 0.028,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.247,
+        "fit_b": 0.048,
+        "a_ft": 0.148,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.43,
+        "fit_b": 0.133,
+        "a_ft": 0.25,
+        "b": 0.059,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:ELGV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.42,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.166,
+    "minor": 0.084,
+    "moderate": 0.031,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "EZMV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.008,
+     "point": "est2337"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.355,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.106,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.283,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.235,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.116,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.007,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.125,
+      "stofs2d": 0.04,
+      "cbofs": -0.24,
+      "nwm_short": 0.226,
+      "nwm_medium": -0.283,
+      "nws": 0.14
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.008,
+        "fit_b": 0.029,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.105,
+        "fit_b": 0.109,
+        "a_ft": 0.028,
+        "b": 0.047,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.3,
+        "fit_b": 0.186,
+        "a_ft": 0.186,
+        "b": 0.104,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204288831",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.399,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.124,
+    "minor": 0.062,
+    "moderate": 0.027,
+    "major": 0.009
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "FEDV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 5.314,
+     "point": "est2345"
+    },
+    "baseline": {
+     "residual_ft": 1.488,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": 1.782,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": 2.799
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 27,
+      "bands": {
+       "0-12": {
+        "runs": 27,
+        "fit_a_ft": 0.641,
+        "fit_b": -0.128,
+        "a_ft": 0.015,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 25,
+        "fit_a_ft": 2.395,
+        "fit_b": -0.694,
+        "a_ft": 0.25,
+        "b": -0.27,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 21,
+        "fit_a_ft": 2.594,
+        "fit_b": 0.388,
+        "a_ft": 0.25,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:FEDV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.428,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.647,
+    "minor": 0.03,
+    "moderate": 0.0,
+    "major": 0.0
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T03:30:00Z",
+      "xhw_ft": 6.45
+     },
+     {
+      "date_time_z": "2026-11-29T15:30:00Z",
+      "xhw_ft": 6.34
+     },
+     {
+      "date_time_z": "2026-11-30T04:30:00Z",
+      "xhw_ft": 6.91
+     },
+     {
+      "date_time_z": "2026-11-30T16:24:00Z",
+      "xhw_ft": 6.68
+     },
+     {
+      "date_time_z": "2026-12-01T05:36:00Z",
+      "xhw_ft": 6.8
+     },
+     {
+      "date_time_z": "2026-12-01T17:30:00Z",
+      "xhw_ft": 6.71
+     }
+    ],
+    "NAVD": [
+     {
+      "date_time_z": "2026-11-30T04:30:00Z",
+      "xhw_ft": 5.03
+     },
+     {
+      "date_time_z": "2026-11-30T16:24:00Z",
+      "xhw_ft": 4.8
+     },
+     {
+      "date_time_z": "2026-12-01T05:36:00Z",
+      "xhw_ft": 4.93
+     },
+     {
+      "date_time_z": "2026-12-01T17:30:00Z",
+      "xhw_ft": 4.83
+     }
+    ]
+   }
+  },
+  "GTND": {
+   "t0": "2026-11-28T17:54:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.162,
+     "point": "8594900"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.623,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.088,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.61,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.628,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.667,
+      "nwm_short": 0.412,
+      "nwm_medium": -0.462,
+      "nws": 0.005
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.096,
+        "fit_b": 0.047,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.226,
+        "fit_b": 0.34,
+        "a_ft": -0.006,
+        "b": 0.175,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.173,
+        "fit_b": 0.693,
+        "a_ft": -0.0,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:54Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:GTND2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.154,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "nws",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.181,
+    "minor": 0.1,
+    "moderate": 0.03,
+    "major": 0.004
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T16:00:00Z",
+      "xhw_ft": 3.91
+     },
+     {
+      "date_time_z": "2026-11-30T05:00:00Z",
+      "xhw_ft": 3.8
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "HPPV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.291,
+     "point": "est2337"
+    },
+    "baseline": {
+     "residual_ft": -0.961,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.885,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.033
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.04,
+        "fit_b": -0.013,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.244,
+        "fit_b": -0.049,
+        "a_ft": 0.147,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.4,
+        "fit_b": 0.069,
+        "a_ft": 0.25,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:HPPV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.992,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.035,
+    "minor": 0.008,
+    "moderate": 0.007,
+    "major": 0.002
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "IHDM": {
+   "t0": "2026-11-28T16:42:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.285,
+     "point": "8579381"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.43,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.721,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.883,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.287,
+     "native_datum": "MSL"
+    },
+    "baseline": {
+     "residual_ft": -0.774,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.791,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.689,
+      "stofs2d": -0.062,
+      "cbofs": -0.203,
+      "nwm_short": 0.164,
+      "nwm_medium": -0.166
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.042,
+        "fit_b": 0.015,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.092,
+        "fit_b": 0.187,
+        "a_ft": -0.0,
+        "b": 0.09,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.163,
+        "fit_b": 0.282,
+        "a_ft": 0.0,
+        "b": 0.14,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T16:42Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:01655480",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.322,
+   "guidance": {
+    "0-12": "stofs2d",
+    "12-36": "stormsense",
+    "36-72": "stofs2d"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "JLMV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.2,
+     "point": "8638610"
+    },
+    "baseline": {
+     "residual_ft": -1.081,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.954,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.731
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.024,
+        "fit_b": 0.078,
+        "a_ft": 0.0,
+        "b": 0.036,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.248,
+        "fit_b": 0.075,
+        "a_ft": 0.149,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.488,
+        "fit_b": 0.168,
+        "a_ft": 0.25,
+        "b": 0.086,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:JLMV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.233,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.005,
+    "minor": 0.001,
+    "moderate": 0.0,
+    "major": 0.0
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "JPHV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.672,
+     "point": "8637712"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.135,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.566,
+     "members": [
+      "petss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.754,
+      "nws": -0.514
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.055,
+        "fit_b": 0.116,
+        "a_ft": -0.0,
+        "b": 0.035,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.395,
+        "fit_b": 0.495,
+        "a_ft": -0.207,
+        "b": 0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.075,
+        "fit_b": 0.429,
+        "a_ft": 0.0,
+        "b": 0.245,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:JPHV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.197,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.17,
+    "minor": 0.108,
+    "moderate": 0.026,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "KIPT": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.001,
+     "point": "8632200"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.621,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.033,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.386,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.768,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.032,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.045,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.741,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.677,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.712,
+      "stofs2d": -0.093,
+      "stofs3d": 0.0,
+      "cbofs": 0.072,
+      "nwm_short": 0.396,
+      "nwm_medium": -0.308,
+      "etss": -0.638,
+      "nws": 0.09
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.002,
+        "fit_b": 0.011,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.087,
+        "fit_b": 0.085,
+        "a_ft": 0.033,
+        "b": 0.029,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.238,
+        "fit_b": 0.154,
+        "a_ft": 0.149,
+        "b": 0.078,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8632200",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.114,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.176,
+    "minor": 0.086,
+    "moderate": 0.046,
+    "major": 0.031
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "KMNV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.267,
+     "point": "8638610"
+    },
+    "baseline": {
+     "residual_ft": -1.033,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.935,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.762
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.037,
+        "fit_b": 0.031,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.247,
+        "fit_b": 0.008,
+        "a_ft": 0.152,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.424,
+        "fit_b": 0.13,
+        "a_ft": 0.25,
+        "b": 0.06,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:KMNV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.342,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.547,
+    "minor": 0.259,
+    "moderate": 0.082,
+    "major": 0.035
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": [
+     {
+      "date_time_z": "2026-11-29T17:54:00Z",
+      "xhw_ft": 1.54
+     },
+     {
+      "date_time_z": "2026-12-01T07:30:00Z",
+      "xhw_ft": 1.5
+     }
+    ]
+   }
+  },
+  "LCEV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.133,
+     "point": "8638863"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.945,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.857,
+     "members": [
+      "petss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.634,
+      "nws": -0.44
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.035,
+        "fit_b": 0.1,
+        "a_ft": -0.0,
+        "b": 0.05,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.16,
+        "fit_b": 0.119,
+        "a_ft": 0.072,
+        "b": 0.038,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.431,
+        "fit_b": 0.14,
+        "a_ft": 0.25,
+        "b": 0.065,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:LCEV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.896,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.143,
+    "minor": 0.075,
+    "moderate": 0.045,
+    "major": 0.024
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "LENM": {
+   "t0": "2026-11-28T17:42:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 1.581,
+     "point": "est0037"
+    },
+    "baseline": {
+     "residual_ft": 1.55,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": 1.353,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": 0.24
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.24,
+        "fit_b": -0.041,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 1.329,
+        "fit_b": -0.374,
+        "a_ft": 0.25,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 1.405,
+        "fit_b": 1.648,
+        "a_ft": 0.25,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:42Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:LENM2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.874,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-28T22:24:00Z",
+      "xhw_ft": 3.79
+     },
+     {
+      "date_time_z": "2026-11-29T09:42:00Z",
+      "xhw_ft": 3.4
+     },
+     {
+      "date_time_z": "2026-11-29T23:36:00Z",
+      "xhw_ft": 3.34
+     },
+     {
+      "date_time_z": "2026-11-30T11:36:00Z",
+      "xhw_ft": 3.44
+     },
+     {
+      "date_time_z": "2026-12-01T00:30:00Z",
+      "xhw_ft": 2.94
+     },
+     {
+      "date_time_z": "2026-12-01T13:06:00Z",
+      "xhw_ft": 2.95
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "LEWI": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.0,
+     "point": "8635750"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.538,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.005,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.052,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.754,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.023,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.543,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.732,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.807,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.011,
+      "stofs2d": 0.089,
+      "stofs3d": 0.0,
+      "cbofs": -0.073,
+      "nwm_short": -0.276,
+      "nwm_medium": -0.288,
+      "etss": -0.529,
+      "nws": -0.289
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.081,
+        "fit_b": 0.076,
+        "a_ft": -0.041,
+        "b": 0.042,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.17,
+        "fit_b": 0.301,
+        "a_ft": -0.092,
+        "b": 0.197,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.03,
+        "fit_b": 0.42,
+        "a_ft": 0.0,
+        "b": 0.274,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8635750",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.626,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.243,
+    "minor": 0.133,
+    "moderate": 0.066,
+    "major": 0.036
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "LSPV": {
+   "t0": "2026-11-28T17:48:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.631,
+     "point": "est0036"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.113,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.052,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.197,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.92,
+     "native_datum": "MSL"
+    },
+    "baseline": {
+     "residual_ft": -0.712,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.681,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.415,
+      "stofs2d": -0.088,
+      "cbofs": -0.027,
+      "nwm_short": 0.05,
+      "nwm_medium": -0.162
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.046,
+        "fit_b": 0.002,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.062,
+        "fit_b": 0.119,
+        "a_ft": -0.0,
+        "b": 0.004,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.289,
+        "fit_b": 0.156,
+        "a_ft": 0.106,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:48Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:LSPV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.744,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.077,
+    "minor": 0.041
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "MNPT": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.003,
+     "point": "8639348"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": -0.084,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.372,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.099,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.277,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.115,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.986,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.892,
+      "stofs2d": -0.111,
+      "stofs3d": 0.0,
+      "nwm_short": 0.24,
+      "nwm_medium": -0.289,
+      "nws": 0.023
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.012,
+        "fit_b": 0.007,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.124,
+        "fit_b": 0.118,
+        "a_ft": 0.053,
+        "b": 0.059,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.275,
+        "fit_b": 0.259,
+        "a_ft": 0.17,
+        "b": 0.161,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8639348",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.402,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.136,
+    "minor": 0.069,
+    "moderate": 0.025,
+    "major": 0.009
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "NRSV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "est2346"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.917,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.072,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.287,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.096,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.885,
+      "nwm_short": 0.151,
+      "nwm_medium": -0.297,
+      "nws": -0.218
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.076,
+        "fit_b": 0.025,
+        "a_ft": -0.021,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.096,
+        "fit_b": 0.191,
+        "a_ft": -0.037,
+        "b": 0.127,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.057,
+        "fit_b": 0.405,
+        "a_ft": 0.0,
+        "b": 0.268,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:NRSV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.254,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.03,
+    "minor": 0.016,
+    "moderate": 0.008,
+    "major": 0.006
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "ONAV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.644,
+     "point": "est2349"
+    },
+    "baseline": {
+     "residual_ft": -0.543,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.609,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.348
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.018,
+        "fit_b": -0.088,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.044,
+        "fit_b": -0.131,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.014,
+        "fit_b": 0.485,
+        "a_ft": 0.0,
+        "b": 0.265,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:ONAV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.855,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.123,
+    "minor": 0.059,
+    "moderate": 0.02,
+    "major": 0.01
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-30T21:24:00Z",
+      "xhw_ft": 2.67
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "PCCV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.149,
+     "point": "8639348"
+    },
+    "baseline": {
+     "residual_ft": -1.013,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.92,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.799
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.051,
+        "fit_b": 0.008,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.234,
+        "fit_b": 0.031,
+        "a_ft": 0.145,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.42,
+        "fit_b": 0.164,
+        "a_ft": 0.25,
+        "b": 0.091,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:PCCV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.22,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.151,
+    "minor": 0.079,
+    "moderate": 0.034,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "PRTV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "est2350"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.941,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.187,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.559,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.674,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.693,
+     "members": [
+      "petss",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.872,
+      "cbofs": -0.096,
+      "nwm_short": -0.196,
+      "nwm_medium": -0.192,
+      "nws": -0.294
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.071,
+        "fit_b": 0.1,
+        "a_ft": -0.025,
+        "b": 0.054,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.137,
+        "fit_b": 0.313,
+        "a_ft": -0.071,
+        "b": 0.206,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.131,
+        "fit_b": 0.634,
+        "a_ft": -0.056,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:PRTV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.765,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "cbofs",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.187,
+    "minor": 0.132,
+    "moderate": 0.061,
+    "major": 0.034
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "RAPV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "est2345"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.696,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.741,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.906,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.135,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.68,
+      "nwm_short": -0.579,
+      "nwm_medium": -0.143,
+      "nws": -0.348
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.104,
+        "fit_b": 0.098,
+        "a_ft": -0.015,
+        "b": 0.032,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.209,
+        "fit_b": 0.489,
+        "a_ft": -0.12,
+        "b": 0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.073,
+        "fit_b": 0.69,
+        "a_ft": -0.0,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:RAPV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.22,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.176,
+    "minor": 0.092,
+    "moderate": 0.042,
+    "major": 0.024
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "RDIV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.669,
+     "point": "est2341"
+    },
+    "baseline": {
+     "residual_ft": -0.636,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.642,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.038
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.077,
+        "fit_b": -0.027,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.342,
+        "fit_b": -0.034,
+        "a_ft": 0.218,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.456,
+        "fit_b": 0.038,
+        "a_ft": 0.25,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:RDIV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.965,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.058,
+    "minor": 0.029,
+    "moderate": 0.006,
+    "major": 0.002
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "RICV": {
+   "t0": "2026-11-28T17:54:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 2.437,
+     "point": "8637712"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.892,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.714,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": 0.431,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": 0.521,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": 0.049,
+      "nwm_short": -0.111,
+      "nwm_medium": -0.125,
+      "nws": 0.335
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.031,
+        "fit_b": -0.053,
+        "a_ft": 0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.055,
+        "fit_b": 0.124,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.465,
+        "fit_b": 0.202,
+        "a_ft": 0.24,
+        "b": 0.035,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T17:54Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:02037705",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.744,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "nws",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.014,
+    "minor": 0.003,
+    "moderate": 0.0,
+    "major": 0.0
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SAXV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "8633777"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.944,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.127,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.432,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.732,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.51,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.733,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.876,
+      "stofs2d": 0.096,
+      "cbofs": -0.068,
+      "nwm_short": -0.248,
+      "nwm_medium": -0.187,
+      "nws": -0.354
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.007,
+        "fit_b": -0.03,
+        "a_ft": -0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.015,
+        "fit_b": -0.068,
+        "a_ft": -0.0,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.057,
+        "fit_b": 0.128,
+        "a_ft": -0.0,
+        "b": 0.003,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:SAXV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.011,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stofs2d",
+    "36-72": "stofs2d"
+   },
+   "chances": {
+    "action": 0.135,
+    "minor": 0.058,
+    "moderate": 0.019,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SGSM": {
+   "t0": "2026-11-28T17:24:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.011,
+     "point": "est0037"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.01,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.882,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.09,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.576,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.618,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.781,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.797,
+      "stofs2d": 0.05,
+      "cbofs": -0.061,
+      "nwm_short": -0.434,
+      "nwm_medium": -0.218,
+      "nws": -0.3
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.073,
+        "fit_b": 0.079,
+        "a_ft": -0.029,
+        "b": 0.041,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.135,
+        "fit_b": 0.272,
+        "a_ft": -0.069,
+        "b": 0.18,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.051,
+        "fit_b": 0.361,
+        "a_ft": 0.0,
+        "b": 0.233,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T17:24Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:SGSM2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.615,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.276,
+    "minor": 0.081,
+    "moderate": 0.037,
+    "major": 0.016
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SLIM": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "8577330"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.518,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.082,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": -0.286,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.561,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.745,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.355,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.555,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.694,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.797,
+      "stofs2d": 0.083,
+      "stofs3d": 0.0,
+      "cbofs": -0.0,
+      "nwm_short": -0.361,
+      "nwm_medium": -0.184,
+      "etss": -0.512,
+      "nws": -0.221
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.065,
+        "fit_b": 0.034,
+        "a_ft": -0.021,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.154,
+        "fit_b": 0.205,
+        "a_ft": -0.084,
+        "b": 0.129,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.042,
+        "fit_b": 0.39,
+        "a_ft": -0.0,
+        "b": 0.257,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8577330",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.45,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.194,
+    "minor": 0.109,
+    "moderate": 0.029,
+    "major": 0.014
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SLRV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.12,
+     "point": "8638610"
+    },
+    "baseline": {
+     "residual_ft": -1.085,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.013,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.757
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.034,
+        "fit_b": 0.053,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.28,
+        "fit_b": 0.054,
+        "a_ft": 0.173,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.513,
+        "fit_b": 0.154,
+        "a_ft": 0.25,
+        "b": 0.067,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:SLRV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.942,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.079,
+    "minor": 0.044,
+    "moderate": 0.033,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SMSV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.268,
+     "point": "est2347"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": -0.388,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.037,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.277,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.227,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.753,
+      "nwm_short": 0.758,
+      "nwm_medium": -0.422,
+      "nws": -0.682
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.107,
+        "fit_b": 0.042,
+        "a_ft": -0.051,
+        "b": 0.004,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.126,
+        "fit_b": 0.249,
+        "a_ft": -0.045,
+        "b": 0.162,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.034,
+        "fit_b": 0.339,
+        "a_ft": 0.0,
+        "b": 0.222,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:SMSV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.175,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.064,
+    "minor": 0.046,
+    "moderate": 0.024,
+    "major": 0.015
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "SWPT": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "8638610"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.621,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": -0.035,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.552,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.824,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.976,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.956,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.095,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.974,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.825,
+      "stofs2d": -0.006,
+      "stofs3d": 0.0,
+      "cbofs": -0.152,
+      "nwm_short": 0.2,
+      "nwm_medium": -0.26,
+      "etss": -0.641,
+      "nws": 0.06
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.003,
+        "fit_b": 0.031,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.103,
+        "fit_b": 0.13,
+        "a_ft": 0.035,
+        "b": 0.071,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.338,
+        "fit_b": 0.168,
+        "a_ft": 0.217,
+        "b": 0.092,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8638610",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.131,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.132,
+    "minor": 0.068,
+    "moderate": 0.028,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USAR": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.01,
+     "point": "8571091"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.478,
+     "native_datum": "MSL"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.71,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.861,
+     "members": [
+      "petss",
+      "cbofs"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.65,
+      "cbofs": -0.138
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.045,
+        "fit_b": 0.07,
+        "a_ft": -0.0,
+        "b": 0.014,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.063,
+        "fit_b": 0.146,
+        "a_ft": -0.0,
+        "b": 0.077,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.055,
+        "fit_b": 0.341,
+        "a_ft": -0.0,
+        "b": 0.214,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:01485755",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.639,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USBB": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 2.605,
+     "point": "est2301"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": 1.826,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": 1.833,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": 0.785
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.338,
+        "fit_b": 0.096,
+        "a_ft": 0.198,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.556,
+        "fit_b": -1.675,
+        "a_ft": -0.233,
+        "b": -0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.654,
+        "fit_b": -2.442,
+        "a_ft": -0.25,
+        "b": -0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204300267",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.841,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USBC": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.046,
+     "point": "8639348"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.177,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.059,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.926
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.024,
+        "fit_b": 0.052,
+        "a_ft": -0.0,
+        "b": 0.015,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.049,
+        "fit_b": 0.192,
+        "a_ft": 0.0,
+        "b": 0.121,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.372,
+        "fit_b": 0.28,
+        "a_ft": 0.242,
+        "b": 0.178,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204288905",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.495,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "minor": 0.062,
+    "moderate": 0.031,
+    "major": 0.009
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USBK": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.151,
+     "point": "est0033"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.96,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.989,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.969,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.925,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.792,
+      "nwm_short": 0.0,
+      "nwm_medium": -0.015
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.016,
+        "fit_b": 0.043,
+        "a_ft": 0.0,
+        "b": 0.009,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 28,
+        "fit_a_ft": -0.001,
+        "fit_b": 0.219,
+        "a_ft": -0.0,
+        "b": 0.136,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 24,
+        "fit_a_ft": 0.213,
+        "fit_b": 0.354,
+        "a_ft": 0.112,
+        "b": 0.233,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0167862550",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.08,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USBM": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.06,
+     "point": "8639348"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.077,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.025,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.827
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.025,
+        "fit_b": 0.068,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.079,
+        "fit_b": 0.179,
+        "a_ft": 0.0,
+        "b": 0.08,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.474,
+        "fit_b": 0.199,
+        "a_ft": 0.25,
+        "b": 0.1,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204288539",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.416,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USFM": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.003,
+     "point": "8638288"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.587,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.084,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.892,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.035,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.008,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.089,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.948,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.876,
+      "stofs2d": 0.003,
+      "cbofs": -0.115,
+      "nwm_short": 0.171,
+      "nwm_medium": -0.262,
+      "etss": -0.6,
+      "nws": 0.097
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.009,
+        "fit_b": 0.042,
+        "a_ft": -0.0,
+        "b": 0.008,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.103,
+        "fit_b": 0.102,
+        "a_ft": 0.019,
+        "b": 0.031,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.367,
+        "fit_b": 0.092,
+        "a_ft": 0.235,
+        "b": 0.015,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204289994",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.165,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.148,
+    "minor": 0.071,
+    "moderate": 0.028,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USHR": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.023,
+     "point": "est0034"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.022,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.167,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.12,
+     "native_datum": "MSL"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.054,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.99,
+     "members": [
+      "petss",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.911,
+      "cbofs": -0.125,
+      "nwm_short": 0.195,
+      "nwm_medium": -0.271
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.01,
+        "fit_b": 0.034,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.104,
+        "fit_b": 0.117,
+        "a_ft": 0.02,
+        "b": 0.048,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.307,
+        "fit_b": 0.163,
+        "a_ft": 0.188,
+        "b": 0.08,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204289985",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.283,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.178,
+    "minor": 0.095,
+    "moderate": 0.031,
+    "major": 0.013
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USJT": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.003,
+     "point": "8637712"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.815,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.343,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.343,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.851,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:00Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.481,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.39,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.874,
+      "stofs2d": 0.04,
+      "cbofs": -0.155,
+      "nwm_short": -0.184,
+      "nwm_medium": -0.041,
+      "nws": -0.017
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.077,
+        "fit_b": 0.066,
+        "a_ft": -0.036,
+        "b": 0.038,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.076,
+        "fit_b": 0.244,
+        "a_ft": -0.014,
+        "b": 0.165,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.207,
+        "fit_b": 0.302,
+        "a_ft": 0.114,
+        "b": 0.194,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:02042770",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.93,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.143,
+    "minor": 0.059,
+    "moderate": 0.038,
+    "major": 0.021
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USLB": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.588,
+     "point": "est2339"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.016,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.141,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.249,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.985,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.591,
+      "nwm_short": 0.302,
+      "nwm_medium": -0.215
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.017,
+        "fit_b": 0.003,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.04,
+        "fit_b": 0.192,
+        "a_ft": -0.0,
+        "b": 0.099,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.287,
+        "fit_b": 0.228,
+        "a_ft": 0.18,
+        "b": 0.137,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204293125",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.226,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.021,
+    "minor": 0.009,
+    "moderate": 0.006,
+    "major": 0.004
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USLI": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.077,
+     "point": "est0035"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.875,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.987,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.06,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.011,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.095,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.892,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.076,
+      "stofs2d": 0.052,
+      "cbofs": -0.397,
+      "nwm_short": -0.232,
+      "nwm_medium": -0.183,
+      "nws": -0.2
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.01,
+        "fit_b": 0.068,
+        "a_ft": 0.0,
+        "b": 0.006,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.082,
+        "fit_b": 0.172,
+        "a_ft": 0.0,
+        "b": 0.078,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.285,
+        "fit_b": 0.234,
+        "a_ft": 0.17,
+        "b": 0.13,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204292275",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.193,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.18,
+    "minor": 0.097,
+    "moderate": 0.053,
+    "major": 0.032
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USLN": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.147,
+     "point": "est2340"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.517,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.674,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.193,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.093,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.324,
+      "nwm_short": 0.552,
+      "nwm_medium": -0.2
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.109,
+        "fit_b": 0.119,
+        "a_ft": -0.041,
+        "b": 0.058,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.254,
+        "fit_b": 0.626,
+        "a_ft": -0.142,
+        "b": 0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.36,
+        "fit_b": 0.999,
+        "a_ft": -0.202,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204295505",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.927,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.283,
+    "minor": 0.119,
+    "moderate": 0.055,
+    "major": 0.013
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USLN-X": {
+   "t0": "2026-11-28T11:36:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.176,
+     "point": "est2340"
+    },
+    "baseline": {
+     "residual_ft": -1.313,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.14,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.465
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 18,
+      "bands": {
+       "0-12": {
+        "runs": 18,
+        "fit_a_ft": -0.1,
+        "fit_b": 0.153,
+        "a_ft": -0.0,
+        "b": 0.052,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 16,
+        "fit_a_ft": -0.222,
+        "fit_b": 0.765,
+        "a_ft": -0.084,
+        "b": 0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 12,
+        "fit_a_ft": 0.067,
+        "fit_b": 1.317,
+        "a_ft": 0.0,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T11:36Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "archive:floodvision/USLN-X",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.074,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USLR": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.22,
+     "point": "est2341"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.446,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.547,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.024,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.792,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.991,
+      "nwm_short": 0.23,
+      "nwm_medium": -0.221
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.006,
+        "fit_b": 0.047,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.045,
+        "fit_b": 0.252,
+        "a_ft": 0.0,
+        "b": 0.154,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.379,
+        "fit_b": 0.3,
+        "a_ft": 0.238,
+        "b": 0.181,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204297575",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.49,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.054,
+    "minor": 0.011,
+    "moderate": 0.007,
+    "major": 0.0
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USMB": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.873,
+     "point": "est2339"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.243,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.009,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.512
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.157,
+        "fit_b": 0.193,
+        "a_ft": -0.075,
+        "b": 0.115,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.011,
+        "fit_b": 0.187,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.614,
+        "fit_b": 0.085,
+        "a_ft": 0.25,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:02042928",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.433,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USNC": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.132,
+     "point": "est0034"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.853,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.032,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.004,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.935,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.917,
+      "nwm_short": 0.25,
+      "nwm_medium": -0.239
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.048,
+        "fit_b": 0.027,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.037,
+        "fit_b": 0.199,
+        "a_ft": -0.0,
+        "b": 0.126,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.236,
+        "fit_b": 0.302,
+        "a_ft": 0.139,
+        "b": 0.193,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0167892964",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.15,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USNR": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.322,
+     "point": "est2346"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.108,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.605,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.908,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.207,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.072,
+     "members": [
+      "petss",
+      "stofs2d",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.859,
+      "stofs2d": 0.234,
+      "nwm_short": 0.366,
+      "nwm_medium": -0.336,
+      "nws": -0.472
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 25,
+      "bands": {
+       "0-12": {
+        "runs": 25,
+        "fit_a_ft": -0.009,
+        "fit_b": 0.093,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 23,
+        "fit_a_ft": 0.097,
+        "fit_b": 0.246,
+        "a_ft": 0.0,
+        "b": 0.121,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 21,
+        "fit_a_ft": 0.061,
+        "fit_b": 0.495,
+        "a_ft": 0.0,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "same gauge: USSF (nwis:02042822)",
+   "tide": "StormSense harmonic tide (fitted to this run's 40 days) locked to m30",
+   "m30_ft": 2.663,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.147,
+    "minor": 0.077,
+    "moderate": 0.012,
+    "major": 0.007
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USPA": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.526,
+     "point": "est2337"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T22:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.024,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.925,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.781
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.074,
+        "fit_b": 0.131,
+        "a_ft": -0.0,
+        "b": 0.043,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.116,
+        "fit_b": 0.201,
+        "a_ft": 0.0,
+        "b": 0.042,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.649,
+        "fit_b": 0.084,
+        "a_ft": 0.25,
+        "b": 0.0,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204288721",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.541,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.072,
+    "minor": 0.047,
+    "moderate": 0.014,
+    "major": 0.007
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T18:24:00Z",
+      "xhw_ft": 4.0
+     },
+     {
+      "date_time_z": "2026-12-01T07:54:00Z",
+      "xhw_ft": 3.86
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "USPT": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.001,
+     "point": "8638339"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.165,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.297,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.138,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.021,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.866,
+      "nwm_short": 0.242,
+      "nwm_medium": -0.212,
+      "nws": 0.11
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.002,
+        "fit_b": 0.02,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.106,
+        "fit_b": 0.135,
+        "a_ft": 0.042,
+        "b": 0.077,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.331,
+        "fit_b": 0.179,
+        "a_ft": 0.213,
+        "b": 0.105,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:02042893",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.374,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.142,
+    "minor": 0.074,
+    "moderate": 0.028,
+    "major": 0.01
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USSB": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.156,
+     "point": "est2349"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.801,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.745,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.817
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": 0.076,
+        "fit_b": -0.322,
+        "a_ft": 0.0,
+        "b": -0.204,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.196,
+        "fit_b": -0.581,
+        "a_ft": 0.0,
+        "b": -0.3,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.242,
+        "fit_b": -0.343,
+        "a_ft": 0.0,
+        "b": -0.032,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:01484812",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.593,
+   "guidance": {
+    "0-12": "petss",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {},
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USSF": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.322,
+     "point": "est2346"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.108,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.605,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.908,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.26,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.092,
+     "members": [
+      "petss",
+      "stofs2d",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.896,
+      "stofs2d": 0.234,
+      "nwm_short": 0.366,
+      "nwm_medium": -0.336,
+      "nws": -0.472
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 25,
+      "bands": {
+       "0-12": {
+        "runs": 25,
+        "fit_a_ft": -0.034,
+        "fit_b": 0.103,
+        "a_ft": -0.0,
+        "b": 0.01,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 23,
+        "fit_a_ft": 0.094,
+        "fit_b": 0.317,
+        "a_ft": 0.0,
+        "b": 0.176,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 21,
+        "fit_a_ft": 0.068,
+        "fit_b": 0.525,
+        "a_ft": 0.0,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:02042822",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.663,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.064,
+    "minor": 0.034,
+    "moderate": 0.008,
+    "major": 0.006
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "USTC": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.114,
+     "point": "est0035"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.966,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.116,
+     "native_datum": "NAVD88"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:30Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.399,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.054,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium"
+     ],
+     "member_offsets_ft": {
+      "petss": -1.062,
+      "nwm_short": 0.19,
+      "nwm_medium": -0.151
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.009,
+        "fit_b": -0.001,
+        "a_ft": -0.0,
+        "b": -0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.034,
+        "fit_b": 0.158,
+        "a_ft": -0.0,
+        "b": 0.082,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.243,
+        "fit_b": 0.255,
+        "a_ft": 0.145,
+        "b": 0.158,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwis:0204291317",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.27,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.035,
+    "minor": 0.02,
+    "moderate": 0.009,
+    "major": 0.006
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "VIMS": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.002,
+     "point": "8637689"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.659,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": -0.01,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.318,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.532,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.798,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.863,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.864,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.737,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.726,
+      "stofs2d": -0.1,
+      "stofs3d": 0.0,
+      "cbofs": -0.188,
+      "nwm_short": 0.24,
+      "nwm_medium": -0.361,
+      "etss": -0.655,
+      "nws": -0.023
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.028,
+        "fit_b": 0.048,
+        "a_ft": -0.0,
+        "b": 0.022,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.061,
+        "fit_b": 0.151,
+        "a_ft": 0.0,
+        "b": 0.088,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.267,
+        "fit_b": 0.211,
+        "a_ft": 0.166,
+        "b": 0.126,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "stand-in: YRCG (coops:8637689)",
+   "tide": "StormSense harmonic tide (fitted to this run's 40 days) locked to m30",
+   "m30_ft": 2.007,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.112,
+    "minor": 0.053,
+    "moderate": 0.035,
+    "major": 0.024
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WACH": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "8631044"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -1.056,
+     "tide": "StormSense m30 tide"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 2.962,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 3.396,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -1.106,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.089,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.929,
+      "nwm_short": 0.564,
+      "nwm_medium": -0.499,
+      "etss": -1.104,
+      "nws": -0.123
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.069,
+        "fit_b": 0.012,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.375,
+        "fit_b": 0.264,
+        "a_ft": -0.225,
+        "b": 0.157,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": -0.569,
+        "fit_b": 0.615,
+        "a_ft": -0.25,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8631044",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 3.114,
+   "guidance": {
+    "0-12": "etss",
+    "12-36": "petss",
+    "36-72": "etss"
+   },
+   "chances": {
+    "action": 0.069,
+    "minor": 0.033,
+    "moderate": 0.016,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WADC": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.002,
+     "point": "8594900"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -1.336,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.267,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": -0.076,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.52,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.948,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.227,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.795,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.792,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.73,
+      "stofs2d": -0.382,
+      "stofs3d": 0.0,
+      "cbofs": 0.132,
+      "nwm_short": 0.397,
+      "nwm_medium": -0.433,
+      "etss": -1.349,
+      "nws": -0.068
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.078,
+        "fit_b": 0.033,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.201,
+        "fit_b": 0.211,
+        "a_ft": -0.038,
+        "b": 0.098,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.116,
+        "fit_b": 0.296,
+        "a_ft": 0.0,
+        "b": 0.137,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8594900",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.044,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.114,
+    "minor": 0.038,
+    "moderate": 0.01,
+    "major": 0.009
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WCKV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "est2348"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.493,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 0.671,
+     "native_datum": "NAVD88"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.756,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.696,
+     "members": [
+      "petss",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.593,
+      "nwm_short": -0.041,
+      "nwm_medium": -0.23,
+      "nws": -0.18
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.09,
+        "fit_b": 0.132,
+        "a_ft": -0.046,
+        "b": 0.084,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.082,
+        "fit_b": 0.409,
+        "a_ft": -0.024,
+        "b": 0.28,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.095,
+        "fit_b": 0.542,
+        "a_ft": 0.021,
+        "b": 0.3,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:WCKV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.116,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.177,
+    "minor": 0.091,
+    "moderate": 0.05,
+    "major": 0.035
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WMPT": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.002,
+     "point": "8636580"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": -0.028,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.013,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.857,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.08,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.431,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.763,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.709,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.967,
+      "stofs2d": 0.006,
+      "stofs3d": 0.0,
+      "cbofs": -0.043,
+      "nwm_short": -0.115,
+      "nwm_medium": -0.246,
+      "nws": -0.133
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.066,
+        "fit_b": 0.082,
+        "a_ft": -0.032,
+        "b": 0.048,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.123,
+        "fit_b": 0.335,
+        "a_ft": -0.061,
+        "b": 0.225,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.077,
+        "fit_b": 0.441,
+        "a_ft": 0.009,
+        "b": 0.29,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8636580",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.566,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stofs2d"
+   },
+   "chances": {
+    "action": 0.24,
+    "minor": 0.115,
+    "moderate": 0.061,
+    "major": 0.04
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WRDV": {
+   "t0": "2026-11-28T18:06:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.581,
+     "point": "est2347"
+    },
+    "baseline": {
+     "residual_ft": -1.133,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.092,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.592
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.06,
+        "fit_b": 0.025,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.028,
+        "fit_b": 0.049,
+        "a_ft": 0.0,
+        "b": 0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.281,
+        "fit_b": 0.091,
+        "a_ft": 0.17,
+        "b": 0.022,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:06Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:WRDV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.253,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "petss",
+    "36-72": "petss"
+   },
+   "chances": {
+    "action": 0.082,
+    "minor": 0.049,
+    "moderate": 0.037,
+    "major": 0.011
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WRSV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 1.444,
+     "point": "est2347"
+    },
+    "baseline": {
+     "residual_ft": -1.21,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.103,
+     "members": [
+      "petss"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.407
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.05,
+        "fit_b": 0.031,
+        "a_ft": -0.0,
+        "b": 0.0,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.175,
+        "fit_b": -0.006,
+        "a_ft": 0.034,
+        "b": -0.0,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.461,
+        "fit_b": -0.013,
+        "a_ft": 0.25,
+        "b": -0.0,
+        "applied": false
+       }
+      },
+      "applied": false
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:WRSV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.854,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.032,
+    "minor": 0.018,
+    "moderate": 0.008,
+    "major": 0.004
+   },
+   "xhw": {
+    "MLLW": [
+     {
+      "date_time_z": "2026-11-29T19:30:00Z",
+      "xhw_ft": 3.88
+     },
+     {
+      "date_time_z": "2026-11-30T07:36:00Z",
+      "xhw_ft": 3.76
+     },
+     {
+      "date_time_z": "2026-12-01T08:48:00Z",
+      "xhw_ft": 3.73
+     }
+    ],
+    "NAVD": []
+   }
+  },
+  "WRVV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.001,
+     "point": "est2336"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 2.018,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.681,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.794,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.842,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -0.687,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.649,
+     "members": [
+      "petss",
+      "stofs2d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.96,
+      "stofs2d": -0.022,
+      "cbofs": 0.028,
+      "nwm_short": 0.235,
+      "nwm_medium": -0.196,
+      "nws": 0.02
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.012,
+        "fit_b": 0.059,
+        "a_ft": -0.0,
+        "b": 0.023,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.101,
+        "fit_b": 0.136,
+        "a_ft": 0.025,
+        "b": 0.066,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.306,
+        "fit_b": 0.188,
+        "a_ft": 0.192,
+        "b": 0.101,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:WRVV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 1.969,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.108,
+    "minor": 0.054,
+    "moderate": 0.025,
+    "major": 0.009
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "WSPV": {
+   "t0": "2026-11-28T18:00:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": 0.875,
+     "point": "8637689"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "baseline": {
+     "residual_ft": -1.438,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -1.077,
+     "members": [
+      "petss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.574,
+      "nws": -0.018
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.105,
+        "fit_b": 0.145,
+        "a_ft": -0.014,
+        "b": 0.075,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": -0.059,
+        "fit_b": 0.4,
+        "a_ft": -0.0,
+        "b": 0.26,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.23,
+        "fit_b": 0.32,
+        "a_ft": 0.121,
+        "b": 0.194,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:00Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "nwps:WSPV2",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.699,
+   "guidance": {
+    "0-12": "nws",
+    "12-36": "nws",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.207,
+    "minor": 0.095,
+    "moderate": 0.026,
+    "major": 0.013
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  },
+  "YRCG": {
+   "t0": "2026-11-28T18:12:00Z",
+   "members": {
+    "petss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.002,
+     "point": "8637689"
+    },
+    "etss": {
+     "run": "2026-11-28T12Z",
+     "aligned_ft": -0.709,
+     "tide": "StormSense m30 tide"
+    },
+    "stofs2d": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": -0.01,
+     "native_datum": "MLLW"
+    },
+    "stofs3d": {
+     "run": "2026-11-27T12:00Z",
+     "aligned_ft": 0.318,
+     "native_datum": "MLLW"
+    },
+    "nwm_short": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 1.532,
+     "native_datum": "NAVD88"
+    },
+    "nwm_medium": {
+     "run": "2026-11-28T06:00Z",
+     "aligned_ft": 1.798,
+     "native_datum": "NAVD88"
+    },
+    "cbofs": {
+     "run": "2026-11-28T12:00Z",
+     "aligned_ft": 0.863,
+     "native_datum": "MSL"
+    },
+    "nws": {
+     "run": "2026-11-28T14:55Z",
+     "aligned_ft": null,
+     "native_datum": "MLLW"
+    },
+    "tidewatch": {
+     "run": "2026-11-26T23:36Z",
+     "aligned_ft": null
+    },
+    "baseline": {
+     "residual_ft": -0.918,
+     "e_folding_h": 24,
+     "tide": "StormSense m30 tide"
+    },
+    "stormsense": {
+     "version": "v1-blend",
+     "residual_now_ft": -0.755,
+     "members": [
+      "petss",
+      "stofs2d",
+      "stofs3d",
+      "cbofs",
+      "nwm_short",
+      "nwm_medium",
+      "etss",
+      "nws"
+     ],
+     "member_offsets_ft": {
+      "petss": -0.742,
+      "stofs2d": -0.1,
+      "stofs3d": 0.0,
+      "cbofs": -0.188,
+      "nwm_short": 0.24,
+      "nwm_medium": -0.361,
+      "etss": -0.707,
+      "nws": -0.023
+     },
+     "tau_h": 12.0,
+     "weights": "1/RMSE^2 per lead band",
+     "tide": "StormSense m30 tide",
+     "corrector": {
+      "runs": 28,
+      "bands": {
+       "0-12": {
+        "runs": 28,
+        "fit_a_ft": -0.032,
+        "fit_b": 0.054,
+        "a_ft": -0.0,
+        "b": 0.027,
+        "applied": true
+       },
+       "12-36": {
+        "runs": 26,
+        "fit_a_ft": 0.049,
+        "fit_b": 0.17,
+        "a_ft": 0.0,
+        "b": 0.103,
+        "applied": false
+       },
+       "36-72": {
+        "runs": 22,
+        "fit_a_ft": 0.266,
+        "fit_b": 0.217,
+        "a_ft": 0.165,
+        "b": 0.129,
+        "applied": false
+       }
+      },
+      "applied": true
+     },
+     "run": "2026-11-28T18:12Z",
+     "aligned_ft": null
+    }
+   },
+   "observations": "coops:8637689",
+   "tide": "StormSense harmonic tide (stored harmonic fit) locked to m30",
+   "m30_ft": 2.007,
+   "guidance": {
+    "0-12": "stormsense",
+    "12-36": "stormsense",
+    "36-72": "stormsense"
+   },
+   "chances": {
+    "action": 0.094,
+    "minor": 0.05,
+    "moderate": 0.032,
+    "major": 0.024
+   },
+   "xhw": {
+    "MLLW": [],
+    "NAVD": []
+   }
+  }
+ },
+ "missing": {
+  "BRDH": "thredds:https://tds.vims.edu/thredds/dodsC/daveAll/drf/Tidewatch/BRDH.nc: The read operation timed out",
+  "CCHV": "no observations since 2026-11-27 16:48Z",
+  "GS01": "no public observation source (GreenStream API needs a key; not fetched yet)",
+  "GS02": "no public observation source (GreenStream API needs a key; not fetched yet)",
+  "USCB": "nwis:01484746: no readings",
+  "USSC": "nwis:01484938: no readings"
+ }
+}

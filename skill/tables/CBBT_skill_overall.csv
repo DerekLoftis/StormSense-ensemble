@@ -1,0 +1,14 @@
+forecast,period,ss_skill,r2,bias_ft,mae_ft,rmse_ft,scores
+NWS P-ETSS,0-66 h,0.913,0.975,-0.046,0.15,0.183,32
+NWS official forecast,0-66 h,0.912,0.978,0.012,0.147,0.18,32
+NOAA STOFS-2D-Global,0-72 h,0.883,0.962,-0.049,0.209,0.269,40
+StormSense model,0-72 h,0.873,0.96,-0.128,0.226,0.293,40
+StormSense model (uncorrected),0-72 h,0.873,0.96,-0.122,0.227,0.295,40
+StormSense Latest (published),0-72 h,0.865,0.956,-0.125,0.237,0.307,40
+NWM coastal (medium range),0-72 h,0.863,0.965,-0.072,0.26,0.32,40
+NOAA CBOFS,0-36 h,0.856,0.98,0.153,0.276,0.308,32
+NOAA STOFS-3D-Atlantic,0-72 h,0.831,0.961,-0.119,0.271,0.336,36
+NWS ETSS,0-72 h,0.814,0.919,-0.148,0.355,0.432,40
+NWM coastal (short range),0-6 h,0.792,0.977,0.052,0.222,0.244,36
+Tide + persistence,0-72 h,0.685,0.766,-0.321,0.547,0.726,40
+Astronomical tide only,0-72 h,0.656,0.762,-0.33,0.611,0.785,40
